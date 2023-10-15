@@ -1,0 +1,18 @@
+A requirements text file can help users set up the necessary environment to run a Python application.
+
+It can contain:
+- package names or libraries that a project relies on
+- version specfiers
+
+This file can be used to install the required packages and their specified versions by using the 
+command:
+pip install -r requirements.txt
+
+Here is an example of what a requirements.txt file might look like:
+
+requests==2.25.1     # Install a specific version of the 'requests' library.
+flask>=1.1.2         # Install 'flask' with a minimum version requirement.
+numpy                # Install the latest version of 'numpy'.
+pandas==1.3.4        # Use a specific version of 'pandas'.
+matplotlib           # Install 'matplotlib' without specifying a version.
+scikit-learn>=0.24.2 # Minimum version of 'scikit-learn'.
