@@ -22,10 +22,14 @@ Fun facts about me:
 * :coffee: As a coffee enthusiast, my main mission is to find the best coffee shop in london _(always welcome to recommendations)_.
 
 
-Hiya, I'm Rebecca.
+###Hiya, I'm Rebecca.###
 
-Like Ros, I also enjoy learning languages. I am learning Welsh on Duolingo and I try to speak it with my husband and daughter ❤️. 
+Like Ros, I also enjoy learning languages. I am learning Welsh on Duolingo and I try to speak it with my husband and daughter :heart:. ~~I am not very good at it though~~
 
-My favourite activity is taking my corgi, Gus, on a long walk along the beach 🏖️.
+My favourite activity is taking my corgi, Gus, on a long walk along the :ocean: .
 
-I also love cooking (and food in general 😋🍕)
+I also love cooking (and food in general :sushi: :pizza:)
+
+My favourite quote is:
+>"Women belong in all places where decisions are being made. It shuldn't be that women are the exception." 
+- Ruth Bader Ginsburg
