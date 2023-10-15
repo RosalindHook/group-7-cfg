@@ -19,8 +19,8 @@ Here are a few things I like:
 Fun facts about me:
 * :art: I love anything crafty and trying out new forms of art - I'm currently learning how to make ceramics.
 * :walking: I enjoy playing badminton, hiking and have a brown belt in Karate.
-* :coffee: As a coffee enthusiast, my main mission is to find the best coffee shop in london _(always welcome to recommendations)_.
-
+* :coffee: As a coffee enthusiast, my main mission is to find the best coffee shop in london _(always welcome to recommendations)_[^1].
+[^1]: _recommendation from Ros: [here](https://maps.app.goo.gl/4UJNnEso4bRPTXgc7) is great for a takeaway, just round the corner from my current office._
 
 Hiya, I'm Rebecca.
 
