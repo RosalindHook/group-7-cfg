@@ -20,3 +20,12 @@ Fun facts about me:
 * :art: I love anything crafty and trying out new forms of art - I'm currently learning how to make ceramics.
 * :walking: I enjoy playing badminton, hiking and have a brown belt in Karate.
 * :coffee: As a coffee enthusiast, my main mission is to find the best coffee shop in london _(always welcome to recommendations)_.
+
+
+Hiya, I'm Rebecca.
+
+Like Ros, I also enjoy learning languages. I am learning Welsh on Duolingo and I try to speak it with my husband and daughter ❤️. 
+
+My favourite activity is taking my corgi, Gus, on a long walk along the beach 🏖️.
+
+I also love cooking (and food in general 😋🍕)
