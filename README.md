@@ -22,7 +22,7 @@ Fun facts about me:
 * :coffee: As a coffee enthusiast, my main mission is to find the best coffee shop in london _(always welcome to recommendations)_.
 
 
-###Hiya, I'm Rebecca.###
+###**Hiya, I'm Rebecca.**
 
 Like Ros, I also enjoy learning languages. I am learning Welsh on Duolingo and I try to speak it with my husband and daughter :heart:. ~~I am not very good at it though~~
 
