@@ -13,3 +13,10 @@ Here are a few things I like:
 * I also enjoy volunteering as a Cubs leader, leading weekly meetings ~~though maybe not right now because of the CFG degree taking up all my free time~~. 
 * Like Olga, my children play chess :chess_pawn:. They usually beat me.
 * I like :smile_cat: :heart_eyes_cat: and live with two, Bella and Cocoa, as well as a :dog: called Argo
+
+## **:wave:Hello! I'm Sriya!**
+
+Fun facts about me:
+* :art: I love anything crafty and trying out new forms of art - I'm currently learning how to make ceramics.
+* :walking: I enjoy playing badminton, hiking and have a brown belt in Karate.
+* :coffee: As a coffee enthusiast, my main mission is to find the best coffee shop in london _(always welcome to recommendations)_.
