@@ -1,8 +1,7 @@
 -- BOOKSHOP DATABASE
--- This SQL script sets up a bookshop database for a new shop, "Seventh Heaven" run by Code Queens.
--- It currently includes the following tables: authors, genres, books (incl prices), store branches and store owners.
--- may want to add a table about stock relating to particular books - amounts of each book (FK) in stock in each branch (FK)
--- The script will also populate the database with mock data and allow the Code Queens to monitor stock.
+-- This SQL script sets up a bookshop database for a new shop, "Seventh Heaven", with four separate branches all owned and run by the Code Queens.
+-- It currently includes the following tables: authors, genres, books (incl prices), store branches, store owners and availability of stock in each branch.
+-- The script below sets up these tables and then populates them with mock data.
 
 -- Creates Bookshop Database
 DROP DATABASE IF EXISTS seventhHeaven;
@@ -94,15 +93,16 @@ VALUES
 -- Adding data into the branch table
 INSERT INTO storeBranch (Location)
 VALUES
-	('Sutton, South-West London');
+	('Sutton'),
+    ('Glasgow');
 
 -- Adding data into store owner table
 INSERT INTO storeOwner (OwnerName, LocationID)
 VALUES
 	('Ros', 1),
-    ('Sriya', NULL),
-    ('Olga', NULL),
-    ('Rebecca', NULL);
+    ('Rebecca', 2),
+    ('Sriya', 3),
+    ('Olga', 4);
     
 -- Adding data to book availability
 INSERT INTO bookAvailability (BookID, BranchID, Availability, Stock)
