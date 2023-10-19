@@ -1,5 +1,4 @@
-# Code Queens
-_putting the 7 in heaven_
+# Code Queens - Putting the 7 in Heaven
 
 ## **Hello !. My name is Olga.**
 ### _I am very glad to be a member of such a wonderful team. I love playing the piano and watching TV series. I also love playing chess with my son._
@@ -7,7 +6,7 @@ _putting the 7 in heaven_
 ## **Hi! I'm Ros...**
 
 Here are a few things I like:
-* I _love_ learning languages - both human and computer ones! I'm currently on a 173 day streak on [Duolingo](https://www.duolingo.com/) :owl: learning Spanish - and counting. 
+* I _love_ learning languages - both human and computer ones! I'm currently on a 173 day streak on [Duolingo](https://www.duolingo.com/) :owl: learning Spanish :es: - and counting. 
 * I also enjoy volunteering as a Cubs leader, leading weekly meetings ~~though maybe not right now because of the CFG degree taking up all my free time~~. 
 * Like Olga, my children play chess :chess_pawn:. They usually beat me.
 * I like :smile_cat: :heart_eyes_cat: and live with two, Bella and Cocoa, as well as a :dog: called Argo
@@ -33,7 +32,7 @@ My favourite quote is:
  -Ruth Bader Ginsburg
 
 
-## **Collaborative Approach and ways of working** :team_work: :handshake:
+## **Collaborative approach and ways of working** :handshake:
 
 Our team employed the following methods for effective collaboration on part 1 of this assignment:
 
@@ -57,4 +56,4 @@ Our team employed the following methods for effective collaboration on part 1 of
 
 :raised_hands: Our collaborative efforts have contributed to the success of part 1 of this assignment...
 
-:rocket: **... And now we are ready to embark on part 2!!!** :woman_technologist: :_alot_ofwork:
+:rocket: **... And now we are ready to embark on part 2!!!** :woman_technologist::woman_technologist::woman_technologist::woman_technologist:
