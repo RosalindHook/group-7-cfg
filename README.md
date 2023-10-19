@@ -1,10 +1,8 @@
-# group-7-cfg
-
-Crowd-sourcing for a team name - go to Slido to [share your thoughts and ideas](https://app.sli.do/event/nJUpEUVV1JFtQMmu9az1k3)
+# Code Queens
+_putting the (team) 7 in heaven_
 
 ## **Hello !. My name is Olga.**
 ### _I am very glad to be a member of such a wonderful team. I love playing the piano and watching TV series. I also love playing chess with my son._
-
 
 ## **Hi! I'm Ros...**
 
@@ -33,3 +31,30 @@ I also love cooking (and food in general :sushi: :pizza:).
 My favourite quote is:
 >"Women belong in all places where decisions are being made. It shouldn't be that women are the exception." 
  -Ruth Bader Ginsburg
+
+
+## **Collaborative Approach and ways of working** :team_work: :handshake:
+
+Our team employed the following methods for effective collaboration on part 1 of this assignment:
+
+1. **Zoom meetings:** We conducted regular Zoom meetings to discuss project requirements, share updates, and foster communication.
+
+2. **Slack communication:** We maintained a dedicated Slack channel for real-time support and to distribute tasks among team members. Slack was also helpful in addressing issues, such as resolving merge conflicts. We broadly followed the process outlined in the following workflow diagram:
+
+![Alt Workflow diagram](https://github.com/RosalindHook/group-7-cfg/blob/main/workflow-diagram.png)
+
+3. **Trello task management:** To keep our work organised and transparent, we used a Trello board. This board allowed us to track, assign, and manage tasks efficiently.
+
+![Alt Our Trello board](https://github.com/RosalindHook/group-7-cfg/blob/main/trello-board.png)
+
+4. **Branch workflow:** Each team member contributed through separate branches. We followed a structured process of peer review and pull request merging to ensure the quality of our code and documentation.
+
+![Alt Branching and merging for part 1](https://github.com/RosalindHook/group-7-cfg/blob/main/branching-diagram.png)
+
+5. **Sli.do Feedback:** We used Sli.do to gather feedback, collaborate, and reach consensus on our team name and slogan, ensuring that our decisions were collective and inclusive.
+
+![Alt Slid.do voting](https://github.com/RosalindHook/group-7-cfg/blob/main/slido-name-vote.png)
+
+:raised_hands: Our collaborative efforts have contributed to the success of part 1 of this assignment...
+
+:rocket: **... And now we are ready to embark on part 2!!!** :woman_technologist: :_alot_ofwork:
