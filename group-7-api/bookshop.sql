@@ -152,3 +152,22 @@ VALUES
     (8, 4, true, 30),
     (9, 4, true, 35),
     (10, 4, false, 10);
+
+-- This stored procedure retrieves the availability and price of a book at different store branches based on the book title.
+
+DELIMITER //
+CREATE PROCEDURE FindBookAvailability(IN bookTitle VARCHAR(250))
+BEGIN
+  SELECT
+    b.Title AS BookTitle,
+    sb.Location AS StoreBranch,
+    ba.Availability AS IsAvailable,
+    b.Price AS BookPrice
+  FROM books AS b
+  JOIN bookAvailability AS ba ON b.BookID = ba.BookID
+  JOIN storeBranch AS sb ON ba.BranchID = sb.BranchID
+  WHERE b.Title = bookTitle;
+END; 
+
+CALL FindBookAvailability('Harry Potter and the Philosophers Stone');
+

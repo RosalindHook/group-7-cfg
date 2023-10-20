@@ -1,7 +1,6 @@
-# Database configuration
-HOST = "insert own details here"
-USER = "insert own details here"
-PASSWORD = 'insert own details here'
+HOST = "Localhost"
+USER = "Olga"
+PASSWORD = "Hj,jnf23"
 
 # different team members to use their own config.py files with their own configuration settings. 
 # This enables all to work with the database without affecting the core code.
