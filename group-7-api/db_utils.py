@@ -1,6 +1,5 @@
 import mysql.connector
 from mysql.connector import cursor
-
 from config import HOST, USER, PASSWORD
 
 def _connect_to_db(db_name):
@@ -13,7 +12,52 @@ def _connect_to_db(db_name):
     )
     return cnx
 
+
+# Called in option 1 of run() menu in main.py
+def get_all_books():
+    """
+    Retrieve a list of all available books with book ID, title, author, and price.
+
+    Returns:
+        list: A list of book records.
+    """
+    try:
+        db_name = 'seventhHeaven'
+        db_connection = _connect_to_db(db_name)
+        cur = db_connection.cursor()
+        print(f"Connected to database {db_name}")
+
+        # Query to retrieve a list of all available books, including book ID, title, author, and price
+        query = """SELECT books.bookID, books.title, 
+               CONCAT(authors.FirstName, ' ', authors.Surname) AS author,
+               books.price
+        FROM books
+        INNER JOIN authors ON books.authorID = authors.authorID"""
+
+        cur.execute(query)
+        results = cur.fetchall()
+        return results  # Return the results
+
+    except Exception as exc:
+        print(exc)
+        return None  # Return None in case of an error
+
+    finally:
+        if db_connection:
+            db_connection.close()
+
+
+# TODO function to include a query to retrieve genres - to be called in option 2 of run() menu of main.py
+
+
+# Called in option 3 of run() menu in main.py
 def get_authors_records():
+    """
+        Retrieve a list of author names by combining their first name and surname.
+
+        Returns:
+            list: A list of author names.
+        """
     try:
         db_name = 'seventhheaven'
         db_connection = _connect_to_db(db_name)
@@ -32,17 +76,28 @@ def get_authors_records():
         if db_connection:
             db_connection.close()
             print("Connection closed")
-get_authors_records()
+
+
 # guery for store procedure. Check if book available, which store, price by title name of book
-def find_book_availability(book_title):
+def find_book_availability(book_id, branch_id):
+    """
+    Check if a book is available at a specific branch and return its details.
+
+    Args:
+        book_id (int): The ID of the book.
+        branch_id (int): The ID of the branch.
+
+    Returns:
+        list: A list of book availability details.
+    """
     try:
         db_name = 'seventhheaven'
         db_connection = _connect_to_db(db_name)
         cursor = db_connection.cursor()
         print(f'Connect to database: {db_name}')
         #Execute the stored procedure using a SQL query
-        query = "CALL FindBookAvailability(%s)"
-        cursor.execute(query, (book_title,))
+        query = "CALL FindBookAvailability(%s, %s)"
+        cursor.execute(query, (book_id, branch_id))
         # Retrieve the results
         results = []
         for row in cursor.fetchall():
@@ -62,10 +117,3 @@ def find_book_availability(book_title):
         cursor.close()
         db_connection.close()
         print("Connection closed")
-# Example usage:
-book_title = "The Hobbit"
-availability_info = find_book_availability(book_title)
-
-if availability_info:
-    for book_info in availability_info:
-        print(f"Book: {book_info['BookTitle']}, Branch: {book_info['StoreBranch']}, Availability: {book_info['IsAvailable']}, Price: {book_info['BookPrice']}")
