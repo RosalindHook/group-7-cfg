@@ -80,7 +80,7 @@ def get_authors_records():
             print("Connection closed")
 
 
-# called in option 4 of run() in main.py
+# Called in option 4 of run() in main.py
 def find_book_availability(book_id, branch_id):
     """
     Check if a book is available at a specific branch and return its details.
