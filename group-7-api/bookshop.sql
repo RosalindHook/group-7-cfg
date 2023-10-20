@@ -95,7 +95,9 @@ INSERT INTO storeBranch (Location)
 VALUES
 	('Sutton'),
     ('Glasgow');
-
+INSERT INTO storeBranch (Location)
+VALUES
+('Edinburgh');
 -- Adding data into store owner table
 INSERT INTO storeOwner (OwnerName, LocationID)
 VALUES
