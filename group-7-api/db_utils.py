@@ -113,7 +113,7 @@ def get_authors_records():
 
 # Called in option 4 of run() menu in main.
 # Stored procedure - Checks if book available, which store, price by title name of book
-def find_book_availability(book_id, branch_id):
+def find_book_availability(book_title):
     """
     Check if a book is available at a specific branch and return its details.
 
@@ -132,7 +132,7 @@ def find_book_availability(book_id, branch_id):
 
         #Execute the stored procedure using a SQL query
         query = "CALL FindBookAvailability(%s, %s)"
-        cursor.execute(query, (book_id, branch_id))
+        cursor.execute(query, (book_title))
 
         # Retrieve the results
         results = []
