@@ -153,3 +153,36 @@ def find_book_availability(book_id, branch_id):
         cursor.close()
         db_connection.close()
         print("Connection closed")
+
+
+# alternative function for check_book_availability
+def check_book_availability(book_id, branch_id):
+    try:
+        db_name = 'seventhHeaven'
+        db_connection = _connect_to_db(db_name)
+        cur = db_connection.cursor()
+        print(f"Connected to database {db_name}")
+
+        query = """
+        SELECT Availability, Stock
+        FROM bookAvailability
+        WHERE BookID = %s AND BranchID = %s
+        """ # %s placeholder for value supplied when query executed
+
+        cur.execute(query, (book_id, branch_id))
+        result = cur.fetchone()
+
+        if result:
+            availability, stock = result
+            return(result)
+        else:
+            # Book not found in the specified branch
+            return None
+
+    except Exception as exc:
+        print(exc)
+        return None
+
+    finally:
+        if db_connection:
+            db_connection.close()
