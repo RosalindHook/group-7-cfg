@@ -47,7 +47,7 @@ def get_all_books():
             db_connection.close()
 
 
-# TODO function to include a query to retreive genres - to be called in option 2 of run() menu of main.py
+# TODO function to include a query to retrieve genres - to be called in option 2 of run() menu of main.py
 
 
 # Called in option 3 of run() menu in main.py
