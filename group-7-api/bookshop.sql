@@ -60,7 +60,7 @@ VALUES
   (501, 'Science Fiction'),
   (601, 'Crime'),
   (701, 'Romance'),
-  (801, 'Thriller'),
+  (801, 'Childrens'),
   (901, 'Self-Help');
   
 -- Adding data into the Authors table
@@ -69,26 +69,26 @@ INSERT INTO Authors
 VALUES
     (1, 'J.K.', 'Rowling'),  
     (2, 'J.R.R.', 'Tolkien'), 
-    (3, 'Stephan', 'King'),  
-    (4, 'Dale', 'Carnegie'),  
+    (3, 'Frank', 'Herbert'),  
+    (4, 'James', 'Clear'),  
     (5, 'Agatha', 'Christie'),  
-    (6, 'John', 'Grisham'),  
+    (6, 'Roald', 'Dahl'),  
     (7, 'Jane', 'Austen'),  
     (8, 'Yuval', 'Harari');   
     
 -- Adding data into the Books table
 INSERT INTO Books (Title, AuthorID, GenreID, Price)
 VALUES
-    ('Harry Potter and the Philosophers Stone', 1, 301, 10.00),
+    ('Harry Potter and the Chamber of Secrets', 1, 301, 10.00),
     ('The Lord of the Rings', 2, 301, 6.99),
-    ('Under the Dome', 3, 501, 5.99),
-    ('How to Win Friends and Influence People', 4, 901, 12.50),
-    ('Murder on the Orient Express', 5, 601, 6.99),
-    ('The Judges List', 6, 801, 8.99),  
-    ('Sense and Sensibility', 7, 701, 2.99),
-    ('Sapiens', 8, 401, 10.50),
-    ('The Hobbit', 2, NULL, 7.50),
-    ('Harry Potter and the Chamber of Secrets', 1, 401, 4.50);
+    ('Dune', 3, 501, 5.99),
+    ('Atomic Habits', 4, 901, 4.99),
+    ('Death on the Nile', 5, 601, 6.99),
+    ('Charlie and the Chocolate Factory', 6, 801, 8.99),  
+    ('Pride and Prejudice', 7, 701, 2.99),
+    ('Homo Deus', 8, 401, 12.50),
+    ('The Hobbit', 2, 301, 7.50),
+    ('Harry Potter and the Prisoner of Azkaban', 1, 401, 10.00);
 
 -- Adding data into the branch table
 INSERT INTO storeBranch (Location)
