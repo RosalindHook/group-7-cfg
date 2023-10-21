@@ -102,12 +102,11 @@ def get_genres():
 
         # Query to retrieve a list of book genres for books stocked by the chain
         query = """
-            SELECT DISTINCT genres.GenreName
+            SELECT GenreID, GenreName
             FROM genres
-            INNER JOIN books ON genres.genreID = books.GenreID
         """
         cur.execute(query)
-        results = [row[0] for row in cur.fetchall()]  # Extract genre names from the result set
+        results = [row[0] for row in cur.fetchall()]  # retrieve both GenreID and GenreName
         cur.close()
         return results
 
