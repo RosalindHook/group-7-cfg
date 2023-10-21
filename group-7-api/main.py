@@ -75,6 +75,31 @@ def explore_genres():
 def explore_authors():
     print("Exploring authors")
 
+    author_search = input("\nEnter the author you want to explore: ").strip()
+    authors = db_utils.search_authors_by_name(author_search)
+
+    if authors:
+        print("\nAuthors available:")
+        for author_id, first_name, last_name in authors:
+            # Print a list of available authors
+            print(f"{author_id}: {first_name} {last_name}")
+
+        selected_author = input("\nEnter the Author's name to explore books by that author: ").strip()
+
+        # Retrieve books by the selected author using the author's name
+        books_by_author = db_utils.get_books_by_author_name(selected_author)
+
+        if books_by_author:
+            print(f"\nBooks available from {selected_author}:")
+            for book_id, title, genre, price, stock in books_by_author:
+                # Print a list of books by the selected author
+                print(f"Book ID: {book_id}, Title: {title}, Genre: {genre}, Price: £{price:.2f}, Stock: {stock}")
+        else:
+            print(f"No books found by {selected_author}.")
+    else:
+        print("No authors found.")
+
+
 def check_stock_availability():
     print("Checking stock availability...")
 
