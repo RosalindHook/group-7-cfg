@@ -59,7 +59,7 @@ def buy_book():
             print(f"New Total Price: £{total_price:.2f}")
 
         # Allow user to purchase another book
-        buy_option = input("Do you want to purchase another book: ").strip()
+        buy_option = input("Do you want to purchase another book: ").strip().lower()
         if buy_option != "y":
             print(f"Basket contains {books_purchased} books.")
             print(f"Total Price: £{total_price:.2f}")
@@ -70,7 +70,7 @@ def buy_book():
 def explore_genres():
     print("Exploring genres...")
  # Retrieve a list of all available genres from the database
-    genres = db_utils.get_all_genres()
+    genres = db_utils.get_genres()
 
     if genres:
         print("\nAvailable Genres:")
