@@ -138,15 +138,15 @@ def get_books_by_genre_name(genre_search):
 
         # Query to retrieve books with a genre name containing the genre_search
         query = """
-        SELECT books.bookID, books.title, 
+        SELECT DISTINCT books.bookID, books.title, 
                CONCAT(authors.FirstName, ' ', authors.Surname) AS author,
-               books.price, bookAvailability.Stock
+               books.price
         FROM books
         INNER JOIN authors ON books.authorID = authors.authorID
-        LEFT JOIN bookAvailability ON books.bookID = bookAvailability.BookID
+        INNER JOIN genres ON books.genreID = genres.genreID
         WHERE genres.GenreName LIKE %s
         """
-        cur.execute(query, (f"%{genre_search}%",))
+        cur.execute(query, (f"%{genre_search}%",))   #wildcard used for partial matching
         results = cur.fetchall()
         cur.close()
         return results
