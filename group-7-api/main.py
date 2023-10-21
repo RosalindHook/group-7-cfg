@@ -74,7 +74,7 @@ def explore_genres():
 
     if genres:
         print("\nAvailable Genres:")
-        for genre_id, genre_name in genres:
+        for genre_name in genres:
             print(f"{genre_name}")
     else:
         print("No genres found.")
