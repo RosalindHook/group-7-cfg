@@ -80,6 +80,13 @@ def buy_book():
             print("Congratulations! You've received a 10% discount!")
             Print(f"New Total Price: £{total_price:.2f}")
 
+        # Allow user to purchase another book
+        buy_option = input("Do you want to purchase another book: ").strip()
+        if buy_option != "y":
+            print(f"Basket contains {books_pruchased} books.")
+            print(f"Total Price: £{total_price:.2f}")
+            print("Returning to main menu")
+            return
 
 ###############################################################
 def explore_genres():
