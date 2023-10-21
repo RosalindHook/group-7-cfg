@@ -3,6 +3,26 @@
 from banner import banner
 import db_utils
 
+def browse_books():
+    books = db_utils.get_all_books()
+    if books:
+        print("\nAvailable Books:")
+        print(f"{'Book ID':<10}{'Title':<40}{'Author':<30}{'Price':<10}")
+        print("-" * 90)
+        for book in books:
+            book_id, title, author, price = book
+            print(f"{book_id:<10}{title:<40}{author:<30}£{price:.2f}")
+        print("-" * 90)
+
+        buy_option = input("\nWould you like to buy a book? (Y/N): ").strip().lower()
+        if buy_option == "y":
+            buy_book()
+        elif buy_option == "n":
+            print("Returning to the main menu.")
+        else:
+            print("Invalid choice. Returning to the main menu.")
+    else:
+        print("No books found in stock.")
 
 def buy_book():
     books_purchased = 0
