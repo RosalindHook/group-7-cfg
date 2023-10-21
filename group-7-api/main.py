@@ -48,7 +48,7 @@ def buy_book():
 
 def explore_genres():
     print("Exploring genres...")
-    # Retrieve a list of all available genres from the database
+ # Retrieve a list of all available genres from the database
     genres = db_utils.get_all_genres()
 
     if genres:
