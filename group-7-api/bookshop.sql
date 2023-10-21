@@ -172,3 +172,61 @@ END;
 CALL FindBookAvailability('Harry Potter and the Prisoner of Azkaban');
 
 
+
+-- This stored procedure retrieves all available books in a specific branch
+DELIMITER //
+CREATE PROCEDURE GetBooksInBranch(IN branchName VARCHAR(250))
+BEGIN
+  SELECT
+    b.BookID,
+    b.Title,
+    a.FirstName,
+    a.Surname AS Author,
+    g.GenreName AS Genre,
+    ba.Price AS Price
+  FROM books AS b
+  JOIN authors AS a ON b.AuthorID = a.AuthorID
+  JOIN genres AS g ON b.GenreID = g.GenreID
+  JOIN bookAvailability AS ba ON b.BookID = ba.BookID
+  JOIN storeBranch AS sb ON ba.BranchID = sb.BranchID
+  WHERE sb.Location = branchName AND ba.Availability = TRUE;
+END;
+
+
+-- This stored procedure retreives all available books in a specific genre
+DELIMITER //
+CREATE PROCEDURE GetBooksByGenre(IN genreName VARCHAR(250))
+BEGIN
+  SELECT
+    b.BookID,
+    b.Title,
+    a.FirstName,
+    a.Surname AS Author,
+    g.GenreName AS Genre,
+    ba.Price AS Price
+  FROM books AS b
+  JOIN authors AS a ON b.AuthorID = a.AuthorID
+  JOIN genres AS g ON b.GenreID = g.GenreID
+  JOIN bookAvailability AS ba ON b.BookID = ba.BookID
+  WHERE g.GenreName = genreName AND ba.Availability = TRUE;
+END;
+
+
+-- This stored procedure retreives all books available from a specific author
+DELIMITER //
+CREATE PROCEDURE GetBooksByAuthor(IN authorName VARCHAR(250))
+BEGIN
+  SELECT
+    b.BookID,
+    b.Title,
+    g.GenreName AS Genre,
+    ba.Price AS Price,
+    ba.Stock
+  FROM books AS b
+  JOIN authors AS a ON b.AuthorID = a.AuthorID
+  JOIN genres AS g ON b.GenreID = g.GenreID
+  JOIN bookAvailability AS ba ON b.BookID = ba.BookID
+  WHERE CONCAT(a.FirstName, ' ', a.Surname) = authorName AND ba.Availability = TRUE;
+END;
+
+

@@ -45,12 +45,103 @@ def buy_book():
     else:
         print("Book not found in the specified branch.")
 
+###############################################################
+def buy_book():
+    books_purchased = 0
+    total_price = 0
 
+    while True: # While loop for multiple book purchases
+        book_id_to_buy = input("Enter the Book ID you want to buy: ").strip()
+        branch_id = input('''Enter the Branch ID where you want to buy the book: 
+            1 = Sutton
+            2 = Glasgow
+            3 = Edinburgh
+            ''').strip()
+
+        # Check avaialbility and stock
+        availability_result, stock = db_utils.check_book_availability(book_id_to_buy, branch_id)
+
+        if availability_result is not None:
+            if availability_result:
+                print(f"The book is available in this branch, and there are {stock} copies in stock.")
+                book_price = db_utils.get_book_price(book_id_to_buy)
+                books_purchased += 1 # Increase books purchased by 1
+                total_price += book_price # Add book price to total price
+                print(f"Total Price So Far: £{total_price:.2f}")
+            else:
+                print("The book is not currently available in this branch. Please select a different book.")
+        else:
+            print("Book not found in the specified branch.")
+
+        # If 3 or more books purchased, apply 10% discount
+        if books_purchased >= 3:
+            discount = total_price*0.1
+            total_price -= discount # Discounted price
+            print("Congratulations! You've received a 10% discount!")
+            Print(f"New Total Price: £{total_price:.2f}")
+
+        # Allow user to purchase another book
+        buy_option = input("Do you want to purchase another book: ").strip()
+        if buy_option != "y":
+            print(f"Basket contains {books_pruchased} books.")
+            print(f"Total Price: £{total_price:.2f}")
+            print("Returning to main menu")
+            return
+
+###############################################################
 def explore_genres():
     print("Exploring genres...")
+ # Retrieve a list of all available genres from the database
+    genres = db_utils.get_all_genres()
+
+    if genres:
+        print("\nAvailable Genres:")
+        for genre_id, genre_name in genres:
+            print(f"{genre_name}")
+    else:
+        print("No genres found.")
+
+    genre_search = input("\nEnter the genre you want to explore (full or partial name): ").strip()
+
+    # Retrieve books based on the entered genre name
+    matching_books = db_utils.get_books_by_genre_name(genre_search)
+
+    if matching_books:
+        print("\nBooks in the selected genre:")
+        for book in matching_books:
+            book_id, title, author, price, stock = book  # Added 'stock' to the unpacking
+            print(f"Book ID: {book_id}, Title: {title}, Author: {author}, Price: £{price:.2f}, Stock: {stock}")
+    else:
+        print(f"No books found for the '{genre_search}' genre.")
+
 
 def explore_authors():
     print("Exploring authors")
+
+    author_search = input("\nEnter the author you want to explore: ").strip()
+    authors = db_utils.search_authors_by_name(author_search)
+
+    if authors:
+        print("\nAuthors available:")
+        for author_id, first_name, last_name in authors:
+            # Print a list of available authors
+            print(f"{author_id}: {first_name} {last_name}")
+
+        selected_author = input("\nEnter the Author's name to explore books by that author: ").strip()
+
+        # Retrieve books by the selected author using the author's name
+        books_by_author = db_utils.get_books_by_author_name(selected_author)
+
+        if books_by_author:
+            print(f"\nBooks available from {selected_author}:")
+            for book_id, title, genre, price, stock in books_by_author:
+                # Print a list of books by the selected author
+                print(f"Book ID: {book_id}, Title: {title}, Genre: {genre}, Price: £{price:.2f}, Stock: {stock}")
+        else:
+            print(f"No books found by {selected_author}.")
+    else:
+        print("No authors found.")
+
 
 def check_stock_availability():
     print("Checking stock availability...")
