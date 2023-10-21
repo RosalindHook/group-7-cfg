@@ -45,7 +45,24 @@ def buy_book():
     else:
         print("Book not found in the specified branch.")
 
+###############################################################
+def buy_book():
+    books_purchased = 0
+    total_price = 0
 
+    while True: # While loop for multiple book purchases
+        book_id_to_buy = input("Enter the Book ID you want to buy: ").strip()
+        branch_id = input('''Enter the Branch ID where you want to buy the book: 
+            1 = Sutton
+            2 = Glasgow
+            3 = Edinburgh
+            ''').strip()
+
+        # Check avaialbility and stock
+        availability_result, stock = db_utils.check_book_availability(book_id_to_buy, branch_id)
+
+  
+###############################################################
 def explore_genres():
     print("Exploring genres...")
  # Retrieve a list of all available genres from the database
