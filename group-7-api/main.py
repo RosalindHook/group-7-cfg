@@ -87,8 +87,8 @@ def explore_genres():
     if matching_books:
         print("\nBooks in the selected genre:")
         for book in matching_books:
-            book_id, title, author, price, stock = book  # Added 'stock' to the unpacking
-            print(f"Book ID: {book_id}, Title: {title}, Author: {author}, Price: £{price:.2f}, Stock: {stock}")
+            book_id, title, author, price = book
+            print(f"Book ID: {book_id}, Title: {title}, Author: {author}, Price: £{price:.2f}")
     else:
         print(f"No books found for the '{genre_search}' genre.")
 
