@@ -1,5 +1,5 @@
-from flask import Flask, jsonify, request
-from db_utils import get_authors_records
+from flask import Flask, jsonify #, request   placeholder as not yet used
+from db_utils import get_authors_records, get_all_books
 
 app = Flask(__name__)
 @app.route('/authors')
@@ -9,7 +9,7 @@ def get_authors():
 
 @app.route('/books', methods=['GET'])
 def get_books():
-    books = db_utils.get_all_books()
+    books = get_all_books()
     if books:
         books_data = [
             {
