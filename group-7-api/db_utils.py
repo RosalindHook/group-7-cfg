@@ -120,6 +120,47 @@ def get_genres():
             print("Connection closed")
 
 
+def get_books_by_genre_name(genre_search):
+    """
+    Retrieve books with a genre name containing the genre_search.
+
+    Args:
+        genre_search (str): The partial genre name to search for.
+
+    Returns:
+        list: A list of books with matching genre names.
+    """
+    try:
+        db_name = 'seventhheaven'
+        db_connection = _connect_to_db(db_name)
+        cur = db_connection.cursor()
+        print(f'Connected to database: {db_name}')
+
+        # Query to retrieve books with a genre name containing the genre_search
+        query = """
+        SELECT books.bookID, books.title, 
+               CONCAT(authors.FirstName, ' ', authors.Surname) AS author,
+               books.price, bookAvailability.Stock
+        FROM books
+        INNER JOIN authors ON books.authorID = authors.authorID
+        LEFT JOIN bookAvailability ON books.bookID = bookAvailability.BookID
+        WHERE genres.GenreName LIKE %s
+        """
+        cur.execute(query, (f"%{genre_search}%",))
+        results = cur.fetchall()
+        cur.close()
+        return results
+
+    except Exception as exc:
+        print(exc)
+        return None  # Return None in case of an error
+
+    finally:
+        if db_connection:
+            db_connection.close()
+            print("Connection closed")
+
+
 # Called in option 3 of run() menu in main.py
 def get_authors_records():
     """
