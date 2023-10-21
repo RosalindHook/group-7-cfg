@@ -211,3 +211,20 @@ BEGIN
 END;
 
 
+-- This stored procedure retreives all books available from a specific author
+DELIMITER //
+CREATE PROCEDURE GetBooksByAuthor(IN authorName VARCHAR(250))
+BEGIN
+  SELECT
+    b.BookID,
+    b.Title,
+    g.GenreName AS Genre,
+    ba.Price AS Price,
+    ba.Stock
+  FROM books AS b
+  JOIN authors AS a ON b.AuthorID = a.AuthorID
+  JOIN genres AS g ON b.GenreID = g.GenreID
+  JOIN bookAvailability AS ba ON b.BookID = ba.BookID
+  WHERE CONCAT(a.FirstName, ' ', a.Surname) = authorName AND ba.Availability = TRUE;
+END;
+
