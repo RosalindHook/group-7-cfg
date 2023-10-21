@@ -50,6 +50,42 @@ def get_all_books():
             db_connection.close()
 
 
+# called in option 1 of run() menu in main.py - if customer wishes to purchase book
+def get_book_price(book_id):
+    """
+    Retrieve the price of a book by its ID.
+
+    Args:
+        book_id (int): The ID of the book for which you want to retrieve the price.
+
+    Returns:
+        float: The price of the book.
+    """
+    try:
+        db_name = 'seventhHeaven'
+        db_connection = _connect_to_db(db_name)
+        cur = db_connection.cursor()
+        print(f"Connected to database {db_name}")
+
+        # Query to retrieve the price of a book by its ID
+        query = "SELECT price FROM books WHERE bookID = %s"
+
+        cur.execute(query, (book_id,))
+        result = cur.fetchone()
+
+        if result:
+            price = result[0]
+            return price
+
+    except Exception as exc:
+        print(exc)
+        return None  # Return None in case of an error
+
+    finally:
+        if db_connection:
+            db_connection.close()
+
+
 # called in option 2 of run() menu in main.py
 def get_genres():
     """
