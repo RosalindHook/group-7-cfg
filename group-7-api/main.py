@@ -61,7 +61,26 @@ def buy_book():
         # Check avaialbility and stock
         availability_result, stock = db_utils.check_book_availability(book_id_to_buy, branch_id)
 
-  
+        if availability_result is not None:
+            if availability_result:
+                print(f"The book is available in this branch, and there are {stock} copies in stock.")
+                book_price = db_utils.get_book_price(book_id_to_buy)
+                books_purchased += 1 # Increase books purchased by 1
+                total_price += book_price # Add book price to total price
+                print(f"Total Price So Far: £{total_price:.2f}")
+            else:
+                print("The book is not currently available in this branch. Please select a different book.")
+        else:
+            print("Book not found in the specified branch.")
+
+        # If 3 or more books purchased, apply 10% discount
+        if books_purchased >= 3:
+            discount = total_price*0.1
+            total_price -= discount # Discounted price
+            print("Congratulations! You've received a 10% discount!")
+            Print(f"New Total Price: £{total_price:.2f}")
+
+
 ###############################################################
 def explore_genres():
     print("Exploring genres...")
