@@ -48,6 +48,29 @@ def buy_book():
 
 def explore_genres():
     print("Exploring genres...")
+    # Retrieve a list of all available genres from the database
+    genres = db_utils.get_all_genres()
+
+    if genres:
+        print("\nAvailable Genres:")
+        for genre_id, genre_name in genres:
+            print(f"{genre_name}")
+    else:
+        print("No genres found.")
+
+    genre_search = input("\nEnter the genre you want to explore (full or partial name): ").strip()
+
+    # Retrieve books based on the entered genre name
+    matching_books = db_utils.get_books_by_genre_name(genre_search)
+
+    if matching_books:
+        print("\nBooks in the selected genre:")
+        for book in matching_books:
+            book_id, title, author, price, stock = book  # Added 'stock' to the unpacking
+            print(f"Book ID: {book_id}, Title: {title}, Author: {author}, Price: £{price:.2f}, Stock: {stock}")
+    else:
+        print(f"No books found for the '{genre_search}' genre.")
+
 
 def explore_authors():
     print("Exploring authors")
