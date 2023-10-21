@@ -88,23 +88,24 @@ def get_genres():
 # Called in option 3 of run() menu in main.py
 def get_authors_records():
     """
-        Retrieve a list of author names by combining their first name and surname.
+        Retrieve a list of all available books with book ID, title, author, and price.
 
         Returns:
-            list: A list of author names.
+            list: A list of book records.
         """
     try:
         db_name = 'seventhheaven'
         db_connection = _connect_to_db(db_name)
         cur = db_connection.cursor()
-        print(f'Connected to database: {db_name}')
+        print(f'Connect to database: {db_name}')
         query = """SELECT concat(FirstName, ' ', Surname)  FROM authors"""
         cur.execute(query)
-        results = [row[0] for row in cur.fetchall()]  # Extract author names from the result set
-        cur.close()
+        results = cur.fetchall()
+        return results
+
+
     except Exception:
         print("Failed to read data from database")
-        return None # in case of error
     finally:
         if db_connection:
             db_connection.close()
@@ -113,46 +114,7 @@ def get_authors_records():
 
 # Called in option 4 of run() menu in main.
 # Stored procedure - Checks if book available, which store, price by title name of book
-def find_book_availability(book_title):
-    """
-    Check if a book is available at a specific branch and return its details.
 
-    Args:
-        book_id (int): The ID of the book to check availability for.
-        branch_id (int): The ID of the branch where availability is checked.
-
-    Returns:
-        list: A list of book availability details.
-    """
-    try:
-        db_name = 'seventhheaven'
-        db_connection = _connect_to_db(db_name)
-        cursor = db_connection.cursor()
-        print(f'Connected to database: {db_name}')
-
-        #Execute the stored procedure using a SQL query
-        query = "CALL FindBookAvailability(%s, %s)"
-        cursor.execute(query, (book_title))
-
-        # Retrieve the results
-        results = []
-        for row in cursor.fetchall():
-            book_title, store_branch, availability, price = row
-            results.append({
-                "BookTitle": book_title,
-                "StoreBranch": store_branch,
-                "IsAvailable": availability,
-                "BookPrice": price
-            })
-
-        return results
-    except Exception as e:
-        print(f"Error: {str(e)}")
-        return None
-    finally:
-        cursor.close()
-        db_connection.close()
-        print("Connection closed")
 
 
 # alternative function for check_book_availability

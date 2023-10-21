@@ -172,6 +172,7 @@ END;
 CALL FindBookAvailability('Harry Potter and the Prisoner of Azkaban');
 
 
+
 -- This stored procedure retrieves all available books in a specific branch
 DELIMITER //
 CREATE PROCEDURE GetBooksInBranch(IN branchName VARCHAR(250))
@@ -227,4 +228,5 @@ BEGIN
   JOIN bookAvailability AS ba ON b.BookID = ba.BookID
   WHERE CONCAT(a.FirstName, ' ', a.Surname) = authorName AND ba.Availability = TRUE;
 END;
+
 
