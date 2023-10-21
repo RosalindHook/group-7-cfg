@@ -102,12 +102,52 @@ def get_genres():
 
         # Query to retrieve a list of book genres for books stocked by the chain
         query = """
-            SELECT DISTINCT genres.GenreName
+            SELECT GenreName
             FROM genres
-            INNER JOIN books ON genres.genreID = books.GenreID
         """
         cur.execute(query)
-        results = [row[0] for row in cur.fetchall()]  # Extract genre names from the result set
+        results = [row[0] for row in cur.fetchall()]  # retrieve both GenreID and GenreName
+        cur.close()
+        return results
+
+    except Exception as exc:
+        print(exc)
+        return None  # Return None in case of an error
+
+    finally:
+        if db_connection:
+            db_connection.close()
+            print("Connection closed")
+
+
+def get_books_by_genre_name(genre_search):
+    """
+    Retrieve books with a genre name containing the genre_search.
+
+    Args:
+        genre_search (str): The partial genre name to search for.
+
+    Returns:
+        list: A list of books with matching genre names.
+    """
+    try:
+        db_name = 'seventhheaven'
+        db_connection = _connect_to_db(db_name)
+        cur = db_connection.cursor()
+        print(f'Connected to database: {db_name}')
+
+        # Query to retrieve books with a genre name containing the genre_search
+        query = """
+        SELECT DISTINCT books.bookID, books.title, 
+               CONCAT(authors.FirstName, ' ', authors.Surname) AS author,
+               books.price
+        FROM books
+        INNER JOIN authors ON books.authorID = authors.authorID
+        INNER JOIN genres ON books.genreID = genres.genreID
+        WHERE genres.GenreName LIKE %s
+        """
+        cur.execute(query, (f"%{genre_search}%",))   #wildcard used for partial matching
+        results = cur.fetchall()
         cur.close()
         return results
 
