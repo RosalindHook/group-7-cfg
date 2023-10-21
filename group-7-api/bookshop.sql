@@ -169,6 +169,6 @@ BEGIN
   WHERE b.Title = bookTitle;
 END; 
 
-CALL FindBookAvailability('Harry Potter and the Philosophers Stone');
+CALL FindBookAvailability('Harry Potter and the Prisoner of Azkaban');
 
 
