@@ -8,8 +8,8 @@ Other requirements for this assignment are:
 
 - [ ] Implement API endpoints with appropriate functionality
 - [ ] Implement one additional endpoint of your choice (can be POST or GET but with a different implementation)
-- [ ] Implement client-side for the 3 API endpoints
-- [ ] Create a MySQL database with at least 1 table
+- [X] Implement client-side for the 3 API endpoints
+- [X] Create a MySQL database with at least 1 table
 - [X] Have a config file (do not leave your private information here)
 - [ ] Have db_utils file and use exception handling
 - [ ] Use appropriate SQL queries to interact with the database in your Flask application, and demonstrate at least two different queries.
