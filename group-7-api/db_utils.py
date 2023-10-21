@@ -102,7 +102,7 @@ def get_genres():
 
         # Query to retrieve a list of book genres for books stocked by the chain
         query = """
-            SELECT GenreID, GenreName
+            SELECT GenreName
             FROM genres
         """
         cur.execute(query)
