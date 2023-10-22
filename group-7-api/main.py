@@ -110,7 +110,7 @@ def explore_authors():
         for author in authors:
             print(author[0])
 
-        selected_author = input("\nEnter the Author's name to explore books by that author: ").strip()
+        selected_author = input("\nEnter the Author's name (full or partial) to explore books by that author: ").strip()
 
         # Retrieve books by the selected author
         matching_books = db_utils.get_books_by_author_name(selected_author)
@@ -137,7 +137,6 @@ def run():
             1 - Browse books
             2 - Explore genres
             3 - Explore authors
-            4 - Check stock availability
             E - Exit the bookshop
             ''').lower()
 
