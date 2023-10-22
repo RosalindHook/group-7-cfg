@@ -2,7 +2,7 @@ This file will eventually become the documentation for how to run the API, inclu
 
 Question 2 - Design and implement a simple API as done in class. 
 
-Group 7's planned scenario is managing a book shop.
+Group 7's planned scenario is managing a bookshop.
 
 Other requirements for this assignment are:
 
@@ -16,7 +16,7 @@ Other requirements for this assignment are:
 - [X] In main.py have a run() function/call the functions to simulate the planned interaction with the API, this could include welcome statements, displaying etc., (hairdressers booking example from lesson)
 - [X] Have correct but minimal  imports per file (do not import things you do not use in the 
 file)
-- [ ] Document how to run your API in a markdown file including editing the config file, any installation requirements up until how to run the code and what is supposed to happen.
+- [X] Document how to run your API in a markdown file including editing the config file, any installation requirements up until how to run the code and what is supposed to happen.
 - [ ] Submit in GitHub as a Pull Request
 
 
