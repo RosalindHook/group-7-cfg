@@ -86,6 +86,38 @@ def get_book_price(book_id):
             db_connection.close()
 
 
+# called in option 1 of run() menu in main.py - updates stock in bookAvailability table
+def update_book_stock(book_id, branch_id, new_stock_count):
+    """
+        Updates the stock count of a specific book in a branch.
+
+        Args:
+            book_id (int): The ID of the book to update.
+            branch_id (int): The ID of the branch where the book is located.
+            new_stock_count (int): The new stock count to set for the book in the branch.
+
+        Returns:
+            None
+        """
+    try:
+        db_name = 'seventhHeaven'
+        db_connection = _connect_to_db(db_name)
+        cur = db_connection.cursor()
+
+        query = """
+            UPDATE bookAvailability
+            SET Stock = %s
+            WHERE BookID = %s AND BranchID = %s
+            """
+        cur.execute(query, (new_stock_count, book_id, branch_id))
+        db_connection.commit()
+    except Exception as exc:
+        print(exc)
+    finally:
+        if db_connection:
+            db_connection.close()
+
+
 # called in option 2 of run() menu in main.py
 def get_genres():
     """
@@ -233,9 +265,37 @@ def get_books_by_author_name(author_name):
             db_connection.close()
 
 
-# Called in option 4 of run() menu in main.
-# Stored procedure - Checks if book available, which store, price by title name of book
+# Called in option 4 of run() menu in main - all stock info
+def get_book_stock_info():
+    """
+    Retrieve stock information for all books in all branches, including Book title and Branch location.
 
+    Returns:
+        list: A list of stock information records (BookID, Book Title, Branch Location, Stock)
+    """
+    try:
+        db_name = 'seventhHeaven'
+        db_connection = _connect_to_db(db_name)
+        cur = db_connection.cursor()
+
+        query = """
+        SELECT ba.BookID, b.Title, sb.Location, ba.Stock
+        FROM bookAvailability AS ba
+        JOIN books AS b ON ba.BookID = b.BookID
+        JOIN storeBranch AS sb ON ba.BranchID = sb.BranchID
+        """
+
+        cur.execute(query)
+        results = cur.fetchall()
+        return results
+
+    except Exception as exc:
+        print("Error:", exc)  # debugging statement
+        return None
+
+    finally:
+        if db_connection:
+            db_connection.close()
 
 
 # alternative function for check_book_availability
