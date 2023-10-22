@@ -47,3 +47,12 @@ USER = "X"  # Replace with your MySQL username
 PASSWORD = "X"  # Replace with your MySQL password
 ``````
 Different team members can use their own config.py files with their own configuration settings, allowing each member to work with the database without affecting the main code.
+
+### Installation Requirements 
+Install the following:
+
+- Python 3.x
+- Flask
+- MySQL server
+
+#
