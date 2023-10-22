@@ -167,7 +167,7 @@ def get_authors_records():
         Retrieve a list of all available books with book ID, title, author, and price.
 
         Returns:
-            list: A list of book records.
+            list: A list of authors names
         """
     try:
         db_name = 'seventhheaven'
@@ -214,10 +214,9 @@ def get_books_by_author_name(author_name):
         print(f"Connected to database {db_name}")
 
         query = """
-        SELECT books.bookID, books.title, genres.GenreName AS Genre, books.price
+        SELECT books.bookID, books.title, CONCAT(authors.FirstName, ' ', authors.Surname) AS Author, books.price
         FROM books
         INNER JOIN authors ON books.authorID = authors.authorID
-        INNER JOIN genres ON books.genreID = genres.genreID
         WHERE CONCAT(authors.FirstName, ' ', authors.Surname) LIKE %s
         """
 
