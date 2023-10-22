@@ -94,3 +94,11 @@ python app.py
 #### POST /donation 
 - Allows customers to donate a used book to the bookshop.
 - URL: 
+
+
+### Database
+The API interacts with a MySQL database named "seventhHeaven". 
+The database contains tables for books, authors, genres, store branches, store owners, and book availability. 
+The tables are populated with sample data.
+
+
