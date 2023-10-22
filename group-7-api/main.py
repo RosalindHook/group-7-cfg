@@ -104,7 +104,6 @@ def explore_authors():
     print("Exploring authors")
 
     author_search = input("\nEnter the author you want to explore: ").strip()
-
     # Retrieve a list of authors from the database
     authors = db_utils.get_authors_records()
 
