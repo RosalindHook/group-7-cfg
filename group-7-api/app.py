@@ -41,15 +41,11 @@ def buy_book():
             # Update the stock in your database (decrease stock count by 1)
             db_utils.update_book_stock(book_id, branch_id, stock - 1)
 
-            # Record the purchase by inserting a record into the databse
-            db_utils.record_purchase(book_id, branch_id)
-
             return jsonify({"message": "Book purchase successful"}), 200
         else:
             return jsonify({"message": "The book is out of stock in this branch"}), 400
     else:
         return jsonify({"message": "The book is not available"}), 400
-
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
