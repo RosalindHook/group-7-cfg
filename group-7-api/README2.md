@@ -32,9 +32,6 @@ The API allows users to browse books, explore various genres and authors, get bo
 3. [Configuration](#config)
 4. [Running the Code](#running-code)
 5. [App File](#App)
-6. [Database Utilities File](#util)
-7. [Main Application](#main)
-8. [MySQL Database](#database)
 9. [API Endpoints](#api)
     1. [GET /authors](#authors)
    2. [GET /books](#books)
@@ -42,13 +39,16 @@ The API allows users to browse books, explore various genres and authors, get bo
    4. [GET /stock](#stock)
    5. [GET /bonus](#bonus)
    6. [POST /donation](#donation)
+6. [Database Utilities File](#util)
+7. [Main Application](#main)
+8. [MySQL Database](#database)
 10. [Usage](#usage)
 
 
 
 ---
-### Scenario <a name="scenario"></a>
-The Code Queens have opened a chain of book shops, Seventh Heaven, with branches in Edinburgh, Glasgow, London and Sutton. 
+## Scenario <a name="scenario"></a>
+The Code Queens have opened a chain of bookshops, Seventh Heaven, with branches in Edinburgh, Glasgow, London and Sutton. 
 
 
 We have built a web application using Flask, to provide a user-friendly experience for book enthusiasts.
@@ -65,7 +65,7 @@ Explore our digital bookshelves and embark on a literary journey with the Code Q
 Enjoy book browsing!
 
 ---
-### Installation Requirements <a name="installation"></a>
+## Installation Requirements <a name="installation"></a>
 **Install the following:**
 
 - Python 3.x
@@ -73,8 +73,10 @@ Enjoy book browsing!
 - MySQL server
 
 ---
-### Configuration <a name="config"></a>
-Before running the Code Queens' Bookshop API, you need to configure the database connection in the config.py file. Replace the following placeholders with your database information:
+## Configuration <a name="config"></a>
+Before running the Code Queens' Bookshop API, you need to configure the database connection in the config.py file - this ensure that the application can connect to your specific database.
+
+Replace the following placeholders with your database information:
 ``````
 HOST = "X"  # Replace with your MySQL server host
 USER = "X"  # Replace with your MySQL username
@@ -84,7 +86,7 @@ Different team members can use their own config.py files with their own configur
 
 
 ---
-### Running the Code <a name="running-code"></a>
+## Running the Code <a name="running-code"></a>
 **Steps to run the application:**
 
 1. Clone the repository 
@@ -98,7 +100,7 @@ Different team members can use their own config.py files with their own configur
    - **Flask** - used to run the Flask web application in ‘app.py’
    - Other modules and files that need to be imported are listed at the top of each file - these do not require separate installation, as they include built-in Python modules, project-specific files or modules that are automatically imported as part of the code.
 4. Configure the database connection 
-   - In the ‘config.py’ file, replace the ‘X’ placeholder information with your own MySQL Workbench database connection details - this ensure that the application can connect to your specific database.
+   - In the ‘config.py’ file, replace the ‘X’ placeholder information with your own MySQL Workbench database connection details *(see configuration section for more info).*
 5. Database setup
    - Open ‘bookshop.sql’ using MySQL workbench. 
    - Use the SQL script to create the database named ‘seventhHeaven’ and the necessary tables - this step is essential to store and retrieve bookshop data effectively.
@@ -109,21 +111,9 @@ Different team members can use their own config.py files with their own configur
 API endpoints can be accessed via this URL: http://127.0.0.1:5003 
 
 ---
-### App File <a name="App"></a>
+## App File <a name="App"></a>
+The **App.py file** handles the core functionality and interaction with the database.
 
----
-### Database Utilities File <a name="util"></a>
-
----
-### Main Application <a name="main"></a>
-
----
-### MySQL Database <a name="database"></a>
-The API interacts with a MySQL database named "seventhHeaven". 
-The database contains tables for books, authors, genres, store branches, store owners, and book availability. 
-The tables are populated with sample data.
-
----
 ### API Endpoints <a name="api"></a>
 
 
@@ -150,6 +140,19 @@ The tables are populated with sample data.
 #### POST /donation <a name="donation"></a>
 - Allows customers to donate a used book to the bookshop.
 - URL: 
+
+
+---
+### Database Utilities File <a name="util"></a>
+
+---
+### Main Application <a name="main"></a>
+
+---
+### MySQL Database <a name="database"></a>
+The API interacts with a MySQL database named "seventhHeaven". 
+The database contains tables for books, authors, genres, store branches, store owners, and book availability. 
+The tables are populated with sample data.
 
 ---
 ### Usage <a name="usage"></a>
