@@ -149,17 +149,28 @@ It is responsible for handling the fundamental functionality of the application 
 The **Db_utils.py file** is a collection of functions used to interact with the database.
 
 These include:
-1. **connect_to_db(db_name)**: Establishes a database connection and returns the connection object.
-2. **get_all_books()**: Retrieves a list of available books, including book ID, title, author, and price.
-3. **get_book_price(book_id)**: Retrieves a book's price based on its ID.
-4. **update_book_stock(book_id, branch_id, new_stock_count)**: Updates the stock count for a specific book in a branch.
-5. **get_genres()**: Retrieves available book genres.
-6. **get_books_by_genre_name(genre_search)**: Retrieves books matching a genre name.
-7. **get_authors_records()**: Retrieves a list of all authors' names.
-8. **get_books_by_author_name(author_name)**: Retrieves books by a specific author.
-9. **get_book_stock_info()**: Retrieves stock information for all books in all branches.
-10. **check_book_availability(book_id, branch_id)**: Checks book availability and stock in a branch.
-11. **get_random_books(num_books=3)**: Retrieves a list of random available books.
+1. **connect_to_db(db_name)**
+   - Establishes a database connection and returns the connection object.
+2. **get_all_books()**
+   - Retrieves a list of available books, including book ID, title, author, and price.
+3. **get_book_price(book_id)**
+   - Retrieves a book's price based on its ID.
+4. **update_book_stock(book_id, branch_id, new_stock_count)**
+   - Updates the stock count for a specific book in a branch.
+5. **get_genres()** 
+   - Retrieves available book genres.
+6. **get_books_by_genre_name(genre_search)**
+   - Retrieves books matching a genre name.
+7. **get_authors_records()**
+   - Retrieves a list of all authors' names.
+8. **get_books_by_author_name(author_name)**
+   - Retrieves books by a specific author.
+9. **get_book_stock_info()**
+   - Retrieves stock information for all books in all branches.
+10. **check_book_availability(book_id, branch_id)**
+    - Checks book availability and stock in a branch.
+11. **get_random_books(num_books=3)**
+    - Retrieves a list of random available books.
 12. ***TBC - Rebecca's function for interacting with the DB to donate books***
 
 
