@@ -32,16 +32,16 @@ The API allows users to browse books, explore various genres and authors, get bo
 3. [Configuration](#config)
 4. [Running the Code](#running-code)
 5. [App File](#App)
-9. [API Endpoints](#api)
+6. [API Endpoints](#api)
     1. [get_authors()](#authors)
    2. [get_books()](#books)
    3. [buy_book()](#buy-book)
    4. [get_stock_info()](#stock)
    5. [get_bonus()](#bonus)
    6. [POST DONATION (TBC)](#donation)
-6. [Database Utilities File](#util)
-7. [Main Application](#main)
-8. [MySQL Database](#database)
+7. [Database Utilities File](#util)
+8. [Main Application](#main)
+9. [MySQL Database](#database)
 10. [Usage](#usage)
 
 
@@ -186,18 +186,38 @@ Once the application is up and running, simply execute main.py, and you'll be gr
 
 ---
 ### MySQL Database <a name="database"></a>
-The API interacts with a MySQL database named "seventhHeaven". 
-The database contains tables for books, authors, genres, store branches, store owners, and book availability. 
-The tables are populated with sample data.
+The **bookshop.sql file** contains the database named "seventhHeaven". 
+
+This database is designed to store and manage data related to books, authors, genres, store branches, and book availability.
+
+Below is an overview of the tables in the database:
+
+1. **Books**: Contains information about all the books available in the bookshop, including details like book ID, title, author, and price.
+2. **Authors**: Stores data about authors, enabling customers to explore books by their favorite writers.
+3. **Genres**: Provides information about different book genres, making it easier for customers to discover books in their preferred categories.
+4. **Store Branches**: Contains data related to the different branches of Seventh Heaven bookshops in Edinburgh, Glasgow, London, and Sutton.
+5. **Store Owners**: Maintains records of store owners who manage each branch.
+6. **Book Availability**: Tracks the availability and stock of each book in every branch. This data is used to ensure customers can purchase books that are in stock.
+7. ***DONATIONS? : TBC***
+
+The tables are pre-populated with sample data to demonstrate the functionality of our API. You can modify, extend, or populate these tables with your own data as needed.
+
 
 ---
 ### Usage <a name="usage"></a>
-This API is designed to be used by the Seventh Heaven Bookshop. 
-Cusotmers can  interact with the bookshop through the API and perform various actions.
+The Code Queens' Bookshop API is designed for use by the Seventh Heaven Bookshop customers and provides a user-friendly and interactive experience. 
 
-**Usage steps :**
-1. Start the API by running the file 'app.py'.
-2. Access the API endpoints to browse books, explore genres and authors, make purchases, get bonus book offers and donate books.
+Below are the steps to use the API:
 
+1. **Start the API**: Run the 'app.py' file to start the API. This action initializes the web application, and you can access the API endpoints to interact with the bookshop.
+2. **Browse Books**: Use the API endpoints to browse a wide selection of books available in the bookshop. This includes viewing book titles, authors, and prices.
+3. **Explore Genres and Authors**: The API provides functionality to explore books by genres and authors. You can discover books that match specific genres or authors and explore the bookshop's catalog.
+4. **Make Purchases**: Customers can use the API to purchase books from different branches. The API checks book availability, and when customers buy three or more books, they receive a 10% discount on their purchase.
+5. **Get Bonus Book Offers**: The API offers a feature to receive random bonus book recommendations at discounted prices. Customers can choose to buy these bonus books.
+6. ***Donate Books (TBC): Customers can use the API to donate used books to the bookshop, making it easy for them to contribute to the bookshop's collection.***
 
+With these features, the Code Queens' Bookshop API provides a comprehensive tool for managing and enhancing the book-buying experience. 
+Customers can explore, purchase, and contribute to the bookshop through a user-friendly interface.
+
+We hope you enjoy using the Code Queens' Bookshop API!
 
