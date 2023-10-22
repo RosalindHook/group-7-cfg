@@ -115,7 +115,7 @@ def explore_authors():
         selected_author = input("\nEnter the Author's name to explore books by that author: ").strip()
 
         # Retrieve books by the selected author
-        matching_books = db_utils.get_books_by_author_name(selected_author)  # Modify this function accordingly
+        matching_books = db_utils.get_books_by_author_name(selected_author)
 
         if matching_books:
             print(f"\nBooks available from {selected_author}:")
