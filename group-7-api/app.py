@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request
-from db_utils import get_authors_records, get_all_books, check_book_availability, get_book_stock_info, update_book_stock
+from db_utils import get_authors_records, get_all_books, get_random_books, check_book_availability, get_book_stock_info, update_book_stock
 
 app = Flask(__name__)
 @app.route('/authors')
@@ -70,3 +70,25 @@ def get_stock_info():
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
+
+   
+@app.route('/bonus')
+def get_bonus():
+    bonus = get_random_books(num_books=3)
+    if bonus:
+        books_data = [
+            {
+                "BookID": book_id,
+                "Title": title,
+                "Author": author,
+                "Price": price
+            }
+            for book_id, title, author, price in bonus
+        ]
+        return jsonify(books_data)
+    else:
+        return jsonify([])  # if no books found, return empty list
+
+
+if __name__ == '__main__':
+    app.run(debug=True, port=5003)

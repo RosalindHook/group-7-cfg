@@ -212,11 +212,19 @@ def get_authors_records():
         return results
 
 
-    except Exception:
-        print("Failed to read data from database")
+
+    except Exception as exc:
+
+        print(exc)
+
+        return None  # Return None in case of an error
+
+
     finally:
+
         if db_connection:
             db_connection.close()
+
             print("Connection closed")
 
 
@@ -317,6 +325,44 @@ def check_book_availability(book_id, branch_id):
     except Exception as exc:
         print(exc)
         return None
+
+    finally:
+        if db_connection:
+            db_connection.close()
+def get_random_books(num_books=3):
+    """
+    Retrieve a list of random available books with book ID, title, author, and price.
+
+    Args:
+        num_books (int): The number of random books to retrieve.
+
+    Returns:
+        list: A list of random book records.
+    """
+    try:
+        db_name = 'seventhHeaven'
+        db_connection = _connect_to_db(db_name)
+        cur = db_connection.cursor()
+        print(f"Connected to database {db_name}")
+
+        # Query to retrieve a list of all available books, including book ID, title, author, and price
+        query = """SELECT books.bookID, books.title, 
+               CONCAT(authors.FirstName, ' ', authors.Surname) AS author,
+               books.price
+        FROM books
+        INNER JOIN authors ON books.authorID = authors.authorID"""
+
+        cur.execute(query)
+        all_books = cur.fetchall()
+
+        # Get a random sample of books
+        random_books = random.sample(all_books, num_books)
+
+        return random_books  # Return the random books
+
+    except Exception as exc:
+        print(exc)
+        return None  # Return None in case of an error
 
     finally:
         if db_connection:
