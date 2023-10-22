@@ -280,14 +280,14 @@ def get_book_stock_info():
         return results
 
     except Exception as exc:
-        print(exc)
+        print("Error:", exc)  # debugging statement
         return None
 
     finally:
         if db_connection:
             db_connection.close()
 
-
+get_book_stock_info()
 
 # alternative function for check_book_availability
 def check_book_availability(book_id, branch_id):
