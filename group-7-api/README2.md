@@ -20,7 +20,7 @@ file)
 - [ ] Submit in GitHub as a Pull Request
 
 
-# Code Queens' Bookshop API Documentation
+# Code Queens' Bookshop API Documentation :books:
 
 This documentation provides an overview of the Code Queens' Bookshop API, which includes Python code and a MySQL database for a bookshop management system for the "Seventh Heaven" Bookshop and its multiple branches. 
 The API allows users to browse books, explore various genres and authors, get bonus book offers and donate books. 
@@ -47,7 +47,7 @@ The API allows users to browse books, explore various genres and authors, get bo
 
 
 ---
-## Scenario <a name="scenario"></a>
+## Scenario :clipboard: <a name="scenario"></a>
 The Code Queens have opened a chain of bookshops, Seventh Heaven, with branches in Edinburgh, Glasgow, London and Sutton. 
 
 
@@ -65,7 +65,7 @@ Explore our digital bookshelves and embark on a literary journey with the Code Q
 Enjoy book browsing!
 
 ---
-## Installation Requirements <a name="installation"></a>
+## Installation Requirements :hammer_and_wrench:  <a name="installation"></a>
 **Install the following:**
 
 - Python 3.x
@@ -73,7 +73,7 @@ Enjoy book browsing!
 - MySQL server
 
 ---
-## Configuration <a name="config"></a>
+## Configuration :gear: <a name="config"></a>
 Before running the Code Queens' Bookshop API, you need to configure the database connection in the config.py file - this ensure that the application can connect to your specific database.
 
 Replace the following placeholders with your database information:
@@ -86,7 +86,7 @@ Different team members can use their own config.py files with their own configur
 
 
 ---
-## Running the Code <a name="running-code"></a>
+## Running the Code :running: <a name="running-code"></a>
 **Steps to run the application:**
 
 1. Clone the repository 
@@ -111,7 +111,7 @@ Different team members can use their own config.py files with their own configur
 API endpoints can be accessed via this URL: http://127.0.0.1:5003 
 
 ---
-## App File <a name="App"></a>
+## App File :open_file_folder: <a name="App"></a>
 The **App.py file** serves as the core of the Code Queens' Bookshop API. 
 
 It is responsible for handling the fundamental functionality of the application and acts as the interface between the user and the database.
@@ -145,7 +145,7 @@ It is responsible for handling the fundamental functionality of the application 
 
 
 ---
-### Database Utilities File <a name="util"></a>
+### Database Utilities File :oil_drum: <a name="util"></a>
 The **Db_utils.py file** is a collection of functions used to interact with the database.
 
 These include:
@@ -175,7 +175,7 @@ These include:
 
 
 ---
-### Main Application <a name="main"></a>
+### Main Application :iphone: <a name="main"></a>
 The **main.py file** is the central script of Code Queens' Seventh Heaven Bookshop. 
 
 This script offers several user-friendly features, allowing customers to browse, buy, explore genres and authors, and even receive bonus book recommendations with discounts. 
@@ -198,7 +198,7 @@ Once the application is up and running, simply execute main.py, and you'll be gr
 5. ***Donate books: TBC***
 
 ---
-### MySQL Database <a name="database"></a>
+### MySQL Database :file_cabinet: <a name="database"></a>
 The **bookshop.sql file** contains the database named "seventhHeaven". 
 
 This database is designed to store and manage data related to books, authors, genres, store branches, and book availability.
@@ -217,7 +217,7 @@ The tables are pre-populated with sample data to demonstrate the functionality o
 
 
 ---
-### Usage <a name="usage"></a>
+### Usage :rocket: <a name="usage"></a>
 The Code Queens' Bookshop API is designed for use by the Seventh Heaven Bookshop customers and provides a user-friendly and interactive experience. 
 
 Below are the steps to use the API:
