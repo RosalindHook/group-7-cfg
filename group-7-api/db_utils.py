@@ -187,6 +187,7 @@ def get_authors_records():
             db_connection.close()
             print("Connection closed")
 
+
 def get_books_by_author_name(author_name):
     """
     Retrieve a list of books containing author_name.
@@ -223,7 +224,6 @@ def get_books_by_author_name(author_name):
     finally:
         if db_connection:
             db_connection.close()
-
 
 
 # Called in option 4 of run() menu in main.
