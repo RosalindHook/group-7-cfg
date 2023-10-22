@@ -18,3 +18,8 @@ Other requirements for this assignment are:
 file)
 - [ ] Document how to run your API in a markdown file including editing the config file, any installation requirements up until how to run the code and what is supposed to happen.
 - [ ] Submit in GitHub as a Pull Request
+
+# Code Queens' Bookshop API Documentation
+
+This documentation provides an overview of the Code Queens' Bookshop API, which includes Python code and a MySQL database for a bookshop management system for the "Seventh Heaven" Bookshop and its multiple branches. 
+The API allows users to browse books, explore various genres and authors, get bonus book offers and donate books. 
