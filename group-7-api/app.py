@@ -69,7 +69,7 @@ def get_stock_info():
         return jsonify([]) # return empty list if no books found
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5001)
+    app.run(debug=True, port=5003)
 
    
 @app.route('/bonus')
