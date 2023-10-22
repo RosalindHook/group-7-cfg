@@ -257,8 +257,35 @@ def get_books_by_author_name(author_name):
             db_connection.close()
 
 
-# Called in option 4 of run() menu in main.
-# Stored procedure - Checks if book available, which store, price by title name of book
+# Called in option 4 of run() menu in main - all stock info
+def get_book_stock_info():
+    """
+    Retrieve stock information for all books in all branches.
+
+    Returns:
+        list: A list of stock information records (BookID, BranchID, Availability, Stock).
+    """
+    try:
+        db_name = 'seventhHeaven'
+        db_connection = _connect_to_db(db_name)
+        cur = db_connection.cursor()
+
+        query = """
+        SELECT BookID, BranchID, Availability, Stock
+        FROM bookAvailability
+        """
+
+        cur.execute(query)
+        results = cur.fetchall()
+        return results
+
+    except Exception as exc:
+        print(exc)
+        return None
+
+    finally:
+        if db_connection:
+            db_connection.close()
 
 
 
