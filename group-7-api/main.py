@@ -126,7 +126,33 @@ def explore_authors():
             print(f"No books found by {selected_author}.")
     else:
         print("No authors found.")
+def random_bonus():
+    result = requests.get('http://127.0.0.1:5003/bonus')
+    if result.status_code == 200:
+        books = result.json()
+        if books:
+            print("\n Congratulations:")
+            print(f"{'Book ID':<10}{'Title':<40}{'Author':<30}{'Price':<10}")
+            print("-" * 90)
+            for book in books:
+                book_id = book["BookID"]
+                title = book["Title"]
+                author = book["Author"]
+                price = book["Price"]
+                print(f"{book_id:<10}{title:<40}{author:<30}£{price:.2f}")
 
+            print("-" * 90)
+
+            bonus_option = input("\n Choose a book and type the ID: ").strip().lower()
+            found = False
+            for book in books:
+                if bonus_option == str(book["BookID"]):  # Convert book ID to a string for comparison
+                    print(f'You can buy it for £{book["Price"] / 2:.2f}')
+                    found = True
+                    break
+
+            if not found:
+                print("Invalid book ID. Please type the correct ID.")
 
 # function to run menu with options
 def run():
@@ -137,6 +163,7 @@ def run():
             1 - Browse books
             2 - Explore genres
             3 - Explore authors
+            4 - Get bonus
             E - Exit the bookshop
             ''').lower()
 
@@ -147,7 +174,7 @@ def run():
         elif menu_choice == "3":
             explore_authors()
         elif menu_choice == "4":
-            check_stock_availability()  # Call a function to check stock availability
+            random_bonus()  # for getting bonus
         elif menu_choice == "e":
             print("Exiting the book shop - goodbye!")
             break
