@@ -19,7 +19,31 @@ file)
 - [ ] Document how to run your API in a markdown file including editing the config file, any installation requirements up until how to run the code and what is supposed to happen.
 - [ ] Submit in GitHub as a Pull Request
 
+
 # Code Queens' Bookshop API Documentation
 
 This documentation provides an overview of the Code Queens' Bookshop API, which includes Python code and a MySQL database for a bookshop management system for the "Seventh Heaven" Bookshop and its multiple branches. 
 The API allows users to browse books, explore various genres and authors, get bonus book offers and donate books. 
+
+### **Table of Contents**
+
+1. Configuration
+2. Installation Requirements
+3. Running the Code
+4. API Endpoints
+5. GET /authors
+6. GET /books
+7. POST /buy-book
+8. GET /stock
+9. GET /bonus
+10. Database
+11. Usage
+
+### Configuration
+Before running the Code Queens' Bookshop API, you need to configure the database connection in the config.py file. Replace the following placeholders with your database information:
+``````
+HOST = "X"  # Replace with your MySQL server host
+USER = "X"  # Replace with your MySQL username
+PASSWORD = "X"  # Replace with your MySQL password
+``````
+Different team members can use their own config.py files with their own configuration settings, allowing each member to work with the database without affecting the main code.
