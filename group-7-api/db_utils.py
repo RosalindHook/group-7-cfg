@@ -260,10 +260,10 @@ def get_books_by_author_name(author_name):
 # Called in option 4 of run() menu in main - all stock info
 def get_book_stock_info():
     """
-    Retrieve stock information for all books in all branches.
+    Retrieve stock information for all books in all branches, including Book title and Branch location.
 
     Returns:
-        list: A list of stock information records (BookID, BranchID, Availability, Stock).
+        list: A list of stock information records (BookID, Book Title, Branch Location, Stock)
     """
     try:
         db_name = 'seventhHeaven'
@@ -271,8 +271,10 @@ def get_book_stock_info():
         cur = db_connection.cursor()
 
         query = """
-        SELECT BookID, BranchID, Availability, Stock
-        FROM bookAvailability
+        SELECT ba.BookID, b.Title, sb.Location, ba.Stock
+        FROM bookAvailability AS ba
+        JOIN books AS b ON ba.BookID = b.BookID
+        JOIN storeBranch AS sb ON ba.BranchID = sb.BranchID
         """
 
         cur.execute(query)
@@ -287,7 +289,6 @@ def get_book_stock_info():
         if db_connection:
             db_connection.close()
 
-get_book_stock_info()
 
 # alternative function for check_book_availability
 def check_book_availability(book_id, branch_id):
