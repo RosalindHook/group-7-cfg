@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request
-from db_utils import get_authors_records, get_all_books, check_book_availability, get_book_stock_info
+from db_utils import get_authors_records, get_all_books, check_book_availability, get_book_stock_info, update_book_stock
 
 app = Flask(__name__)
 @app.route('/authors')
@@ -40,7 +40,7 @@ def buy_book():
     if availability_result:
         if stock > 0:
             # Update the stock in your database (decrease stock count by 1)
-            db_utils.update_book_stock(book_id, branch_id, stock - 1)
+            update_book_stock(book_id, branch_id, stock - 1)
 
             return jsonify({"message": "Book purchase successful"}), 200
         else:
