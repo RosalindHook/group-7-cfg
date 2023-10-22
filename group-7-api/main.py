@@ -4,7 +4,7 @@ from banner import banner
 import db_utils
 
 def browse_books():
-    result = requests.get('http://127.0.0.1:5001/books')
+    result = requests.get('http://127.0.0.1:5003/books')
     if result.status_code == 200:
         books = result.json()
         if books:
@@ -54,7 +54,7 @@ def buy_book():
             total_price += book_price  # Add book price to total price
 
             # Send a POST request to the server to add a book to the basket
-            response = requests.post('http://127.0.0.1:5001/buy-book', json={
+            response = requests.post('http://127.0.0.1:5003/buy-book', json={
                 "book_id": book_id_to_buy,
                 "branch_id": branch_id
             })
