@@ -53,6 +53,16 @@ def buy_book():
                 books_purchased += 1 # Increase books purchased by 1
                 total_price += book_price # Add book price to total price
                 print(f"Total Price So Far: £{total_price:.2f}")
+
+                # Send a POST request to server, JSON object represents book being purchased
+                response = requests.post('http://127.0.0.1:5000/buy-book', json= {
+                    "book_id": book_id_to_buy,
+                    "branch_id": branch_id
+                })
+                if response.status_code == 200:
+                    print("Book added to basket successfully.")
+                else:
+                    print("Failed to add book to basket.")
             else:
                 print("The book is not currently available in this branch. Please select a different book.")
         else:
