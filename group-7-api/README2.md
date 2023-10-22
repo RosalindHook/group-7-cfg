@@ -33,12 +33,12 @@ The API allows users to browse books, explore various genres and authors, get bo
 4. [Running the Code](#running-code)
 5. [App File](#App)
 9. [API Endpoints](#api)
-    1. [GET /authors](#authors)
-   2. [GET /books](#books)
-   3. [POST /buy-book](#buy-book)
-   4. [GET /stock](#stock)
-   5. [GET /bonus](#bonus)
-   6. [POST /donation](#donation)
+    1. [get_authors()](#authors)
+   2. [get_books()](#books)
+   3. [buy_book()](#buy-book)
+   4. [get_stock_info()](#stock)
+   5. [get_bonus()](#bonus)
+   6. [POST DONATION (TBC)](#donation)
 6. [Database Utilities File](#util)
 7. [Main Application](#main)
 8. [MySQL Database](#database)
@@ -117,29 +117,29 @@ The **App.py file** handles the core functionality and interaction with the data
 ### API Endpoints <a name="api"></a>
 
 
-#### GET /authors <a name="authors"></a>
-- Retrieves a list of all authors available in the bookstore.
+#### get_authors() <a name="authors"></a>
+- Handles GET requests to the '/authors' route, providing a list of authors' records from the database as JSON.
 - URL: http://127.0.0.1:5003/authors
 
-#### GET /books  <a name="books"></a>
-- Retrieves a list of all available books with details including Book ID, Title, Author, and Price.
+#### get_books() <a name="books"></a>
+- Manages GET requests to the '/books' route, returning a list of all books as JSON.
 - URL: http://127.0.0.1:5003/books
 
-#### POST /buy-book <a name="buy-book"></a>
-- Allows customers to purchase a book by specifying the Book ID and the Branch ID they want to buy it from.
+#### buy_book() <a name="buy-book"></a>
+- Creates an endpoint for POST requests to the '/buy-book' route, allowing customers to purchase books with availability checks and stock updates.
 - URL: http://127.0.0.1:5003/buy-book
 
-#### GET /stock  <a name="stock"></a>
-- Retrieves stock information for all books in all branches, including Book ID, Book Title, Branch Location, and Stock count.
+#### get_stock_info()  <a name="stock"></a>
+- Deals with GET requests to the '/stock' route, retrieving stock information for all books and branches.
 - URL: http://127.0.0.1:5003/stock
 
-#### GET /bonus  <a name="bonus"></a>
-- Provides a list of random bonus book offers. Customers can choose a book from the list and get it at a discounted price.
+#### get_bonus()  <a name="bonus"></a>
+- Provides bonus book recommendations through GET requests to the '/bonus' route.
 - URL: http://127.0.0.1:5003/bonus
 
-#### POST /donation <a name="donation"></a>
-- Allows customers to donate a used book to the bookshop.
-- URL: 
+#### ***POST DONATION (TBC)*** <a name="donation"></a>
+- ***...allowing customers to donate used books to the bookshop.***
+- ***URL:***
 
 
 ---
