@@ -110,7 +110,7 @@ def explore_authors():
     if authors:
         print("\nAuthors available:")
         for author in authors:
-            print(author[0])  # Assuming each row contains the author's full name
+            print(author[0])
 
         selected_author = input("\nEnter the Author's name to explore books by that author: ").strip()
 
