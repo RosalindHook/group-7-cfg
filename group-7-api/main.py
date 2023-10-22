@@ -4,7 +4,7 @@ from banner import banner
 import db_utils
 
 def browse_books():
-    result = requests.get('http://127.0.0.1:5000/books')
+    result = requests.get('http://127.0.0.1:5001/books')
     if result.status_code == 200:
         books = result.json()
         if books:
@@ -40,7 +40,8 @@ def buy_book():
         branch_id = input('''Enter the Branch ID where you want to buy the book: 
             1 = Sutton
             2 = Glasgow
-            3 = Edinburgh
+            3 = London
+            4 = Edinburgh
             ''').strip()
 
         # Check availability and stock
@@ -51,20 +52,21 @@ def buy_book():
             book_price = db_utils.get_book_price(book_id_to_buy)
             books_purchased += 1  # Increase books purchased by 1
             total_price += book_price  # Add book price to total price
-            print("Book added to basket successfully.")
+
+            # Send a POST request to the server to add a book to the basket
+            response = requests.post('http://127.0.0.1:5001/buy-book', json={
+                "book_id": book_id_to_buy,
+                "branch_id": branch_id
+            })
+
+            if response.status_code == 200:
+                print("Book added to basket successfully.")
+                print(f"Total price so far: £{total_price:.2f}")
+            else:
+                print("Failed to add book to basket.")
+                print(f"server response: {response.text}")
         else:
-            print("The book is not currently available in this branch. Please select a different book.")
-
-        print(f"Total Price So Far: £{total_price:.2f}")
-
-        # Send a POST request to the server to add a book to the basket
-        response = requests.post('http://127.0.0.1:5000/buy-book', json={
-            "book_id": book_id_to_buy,
-            "branch_id": branch_id
-        })
-
-        if response.status_code != 200:
-            print("Failed to add book to basket.")
+            print("The book is not currently available in this branch.")
 
         # If 3 or more books purchased, apply 10% discount
         if books_purchased >= 3:
@@ -80,7 +82,6 @@ def buy_book():
             print(f"Total Price: £{total_price:.2f}")
             print("Returning to main menu")
             return
-
 
 def explore_genres():
     print("Exploring genres...")
