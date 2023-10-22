@@ -25,9 +25,10 @@ file)
 This documentation provides an overview of the Code Queens' Bookshop API, which includes Python code and a MySQL database for a bookshop management system for the "Seventh Heaven" Bookshop and its multiple branches. 
 The API allows users to browse books, explore various genres and authors, get bonus book offers and donate books. 
 
-
+---
 ## Table of contents
-1. [Configuration](#config)
+1. [Scenario](#scenario)
+2. [Configuration](#config)
 2. [Installation Requirements](#installation)
 3. [Running the Code](#running-code)
 4. [App File](#App)
@@ -45,6 +46,12 @@ The API allows users to browse books, explore various genres and authors, get bo
 
 
 
+---
+### Scenario <a name="scenario"></a>
+
+
+
+---
 ### Configuration <a name="config"></a>
 Before running the Code Queens' Bookshop API, you need to configure the database connection in the config.py file. Replace the following placeholders with your database information:
 ``````
@@ -55,6 +62,7 @@ PASSWORD = "X"  # Replace with your MySQL password
 Different team members can use their own config.py files with their own configuration settings, allowing each member to work with the database without affecting the main code.
 
 
+---
 ### Installation Requirements <a name="installation"></a>
 Install the following:
 
@@ -62,7 +70,7 @@ Install the following:
 - Flask
 - MySQL server
 
-
+---
 ### Running the Code <a name="running-code"></a>
 - Create and configure the config.py file as described in the Configuration section.
 - Ensure that your MySQL server is running.
@@ -72,22 +80,24 @@ python app.py
 ``````
 - The API will start running on http://127.0.0.1:5003 (the endpoints can be accessed via this URL)
 
-
+---
 ### App File <a name="App"></a>
 
-
+---
 ### Database Utilities File <a name="util"></a>
 
-
+---
 ### Main Application <a name="main"></a>
 
-
+---
 ### MySQL Database <a name="database"></a>
 The API interacts with a MySQL database named "seventhHeaven". 
 The database contains tables for books, authors, genres, store branches, store owners, and book availability. 
 The tables are populated with sample data.
 
+---
 ### API Endpoints <a name="api"></a>
+
 
 #### GET /authors <a name="authors"></a>
 - Retrieves a list of all authors available in the bookstore.
@@ -113,7 +123,7 @@ The tables are populated with sample data.
 - Allows customers to donate a used book to the bookshop.
 - URL: 
 
-
+---
 ### Usage <a name="usage"></a>
 This API is designed to be used by the Seventh Heaven Bookshop. 
 Cusotmers can  interact with the bookshop through the API and perform various actions.
