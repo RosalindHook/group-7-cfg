@@ -1,5 +1,5 @@
-from flask import Flask, jsonify #, request   placeholder as not yet used
-from db_utils import get_authors_records, get_all_books
+from flask import Flask, jsonify, request
+from db_utils import get_authors_records, get_all_books, check_book_availability, get_book_stock_info
 
 app = Flask(__name__)
 @app.route('/authors')
@@ -12,6 +12,7 @@ def get_authors():
 def get_books():
     books = get_all_books()
     if books:
+        # convert tuples to dictionary list for JSON formatting
         books_data = [
             {
                 "BookID": book_id,
@@ -34,7 +35,7 @@ def buy_book():
     branch_id = book_data.get("branch_id")
 
     # Check book availability and stock
-    availability_result, stock = db_utils.check_book_availability(book_id, branch_id)
+    availability_result, stock = check_book_availability(book_id, branch_id)
 
     if availability_result:
         if stock > 0:
@@ -47,15 +48,25 @@ def buy_book():
     else:
         return jsonify({"message": "The book is not available"}), 400
 
-if __name__ == '__main__':
-    app.run(debug=True, port=5001)
-
 
 @app.route('/stock', methods=['GET'])
 def get_stock_info():
     stock_info = get_book_stock_info()  # returns all stock info
 
     if stock_info:
-        return jsonify(stock_info), 200
+        # convert tuples to dictionary list for JSON formatting
+        formatted_stock_info = [
+            {
+                "BookID": book_id,
+                "Book title": title,
+                "Branch": branch,
+                "Stock": stock
+            }
+            for book_id, title, branch, stock in stock_info
+        ]
+        return jsonify(formatted_stock_info)
     else:
-        return jsonify({"message": "Failed to retrieve stock information"}), 500
+        return jsonify([]) # return empty list if no books found
+
+if __name__ == '__main__':
+    app.run(debug=True, port=5001)
