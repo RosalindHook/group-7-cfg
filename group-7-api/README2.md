@@ -36,8 +36,10 @@ The API allows users to browse books, explore various genres and authors, get bo
 7. POST /buy-book
 8. GET /stock
 9. GET /bonus
+10. POST /donation
 10. Database
 11. Usage
+
 
 ### Configuration
 Before running the Code Queens' Bookshop API, you need to configure the database connection in the config.py file. Replace the following placeholders with your database information:
@@ -48,12 +50,14 @@ PASSWORD = "X"  # Replace with your MySQL password
 ``````
 Different team members can use their own config.py files with their own configuration settings, allowing each member to work with the database without affecting the main code.
 
+
 ### Installation Requirements 
 Install the following:
 
 - Python 3.x
 - Flask
 - MySQL server
+
 
 ### Running the Code
 - Create and configure the config.py file as described in the Configuration section.
@@ -64,3 +68,29 @@ python app.py
 ``````
 - The API will start running on http://127.0.0.1:5003 (the endpoints can be accessed via this URL)
 
+
+### API Endpoints
+
+#### GET /authors 
+- Retrieves a list of all authors available in the bookstore.
+- URL: http://127.0.0.1:5003/authors
+
+#### GET /books 
+- Retrieves a list of all available books with details including Book ID, Title, Author, and Price.
+- URL: http://127.0.0.1:5003/books
+
+#### POST /buy-book
+- Allows customers to purchase a book by specifying the Book ID and the Branch ID they want to buy it from.
+- URL: http://127.0.0.1:5003/buy-book
+
+#### GET /stock 
+- Retrieves stock information for all books in all branches, including Book ID, Book Title, Branch Location, and Stock count.
+- URL: http://127.0.0.1:5003/stock
+
+#### GET /bonus 
+- Provides a list of random bonus book offers. Customers can choose a book from the list and get it at a discounted price.
+- URL: http://127.0.0.1:5003/bonus
+
+#### POST /donation 
+- Allows customers to donate a used book to the bookshop.
+- URL: 
