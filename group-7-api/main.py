@@ -46,27 +46,25 @@ def buy_book():
         # Check availability and stock
         availability_result, stock = db_utils.check_book_availability(book_id_to_buy, branch_id)
 
-        if availability_result is not None:
-            if availability_result:
-                print(f"The book is available in this branch, and there are {stock} copies in stock.")
-                book_price = db_utils.get_book_price(book_id_to_buy)
-                books_purchased += 1 # Increase books purchased by 1
-                total_price += book_price # Add book price to total price
-                print(f"Total Price So Far: £{total_price:.2f}")
-
-                # Send a POST request to server, JSON object represents book being purchased
-                response = requests.post('http://127.0.0.1:5000/buy-book', json= {
-                    "book_id": book_id_to_buy,
-                    "branch_id": branch_id
-                })
-                if response.status_code == 200:
-                    print("Book added to basket successfully.")
-                else:
-                    print("Failed to add book to basket.")
-            else:
-                print("The book is not currently available in this branch. Please select a different book.")
+        if availability_result:
+            print(f"The book is available in this branch, and there are {stock} copies in stock.")
+            book_price = db_utils.get_book_price(book_id_to_buy)
+            books_purchased += 1  # Increase books purchased by 1
+            total_price += book_price  # Add book price to total price
+            print("Book added to basket successfully.")
         else:
-            print("Book not found in the specified branch.")
+            print("The book is not currently available in this branch. Please select a different book.")
+
+        print(f"Total Price So Far: £{total_price:.2f}")
+
+        # Send a POST request to the server to add a book to the basket
+        response = requests.post('http://127.0.0.1:5000/buy-book', json={
+            "book_id": book_id_to_buy,
+            "branch_id": branch_id
+        })
+
+        if response.status_code != 200:
+            print("Failed to add book to basket.")
 
         # If 3 or more books purchased, apply 10% discount
         if books_purchased >= 3:
