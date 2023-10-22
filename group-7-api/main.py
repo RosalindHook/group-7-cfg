@@ -3,6 +3,7 @@ import json
 from banner import banner
 import db_utils
 
+
 def browse_books():
     result = requests.get('http://127.0.0.1:5003/books')
     if result.status_code == 200:
@@ -30,6 +31,7 @@ def browse_books():
             print("No books found in stock.")
     else:
         print("Failed to retrieve book data.")
+
 
 def buy_book():
     books_purchased = 0
@@ -83,6 +85,7 @@ def buy_book():
             print("Returning to main menu")
             return
 
+
 def explore_genres():
     print("Exploring genres...")
  # Retrieve a list of all available genres from the database
@@ -135,6 +138,8 @@ def explore_authors():
             print(f"No books found by {selected_author}.")
     else:
         print("No authors found.")
+
+
 def random_bonus():
     result = requests.get('http://127.0.0.1:5003/bonus')
     if result.status_code == 200:
@@ -162,6 +167,7 @@ def random_bonus():
 
             if not found:
                 print("Invalid book ID. Please type the correct ID.")
+
 
 # function to run menu with options
 def run():
