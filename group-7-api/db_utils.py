@@ -182,6 +182,7 @@ def get_authors_records():
 
     except Exception:
         print("Failed to read data from database")
+        return None
     finally:
         if db_connection:
             db_connection.close()
