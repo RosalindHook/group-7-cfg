@@ -101,9 +101,7 @@ def explore_genres():
 
 
 def explore_authors():
-    print("Exploring authors")
-
-    author_search = input("\nEnter the author you want to explore: ").strip()
+    print("Exploring authors...")
     # Retrieve a list of authors from the database
     authors = db_utils.get_authors_records()
 
@@ -117,11 +115,13 @@ def explore_authors():
         # Retrieve books by the selected author
         matching_books = db_utils.get_books_by_author_name(selected_author)
 
+        # Retrieve books based on the entered author's name
+
         if matching_books:
             print(f"\nBooks available from {selected_author}:")
             for book in matching_books:
-                book_id, title, author, price, stock = book
-                print(f"Book ID: {book_id}, Title: {title}, Author: {author}, Price: £{price:.2f}, Stock: {stock}")
+                book_id, title, author, price = book
+                print(f"Book ID: {book_id}, Title: {title}, Author: {author}, Price: £{price:.2f}")
         else:
             print(f"No books found by {selected_author}.")
     else:
