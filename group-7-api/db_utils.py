@@ -180,12 +180,19 @@ def get_authors_records():
         return results
 
 
-    except Exception:
-        print("Failed to read data from database")
-        return None
+
+    except Exception as exc:
+
+        print(exc)
+
+        return None  # Return None in case of an error
+
+
     finally:
+
         if db_connection:
             db_connection.close()
+
             print("Connection closed")
 
 
