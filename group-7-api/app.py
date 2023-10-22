@@ -49,3 +49,13 @@ def buy_book():
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
+
+
+@app.route('/stock', methods=['GET'])
+def get_stock_info():
+    stock_info = get_book_stock_info()  # returns all stock info
+
+    if stock_info:
+        return jsonify(stock_info), 200
+    else:
+        return jsonify({"message": "Failed to retrieve stock information"}), 500
