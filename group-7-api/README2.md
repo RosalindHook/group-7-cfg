@@ -28,28 +28,49 @@ The API allows users to browse books, explore various genres and authors, get bo
 ---
 ## Table of contents
 1. [Scenario](#scenario)
-2. [Configuration](#config)
 2. [Installation Requirements](#installation)
-3. [Running the Code](#running-code)
-4. [App File](#App)
-5. [Database Utilities File](#util)
-6. [Main Application](#main)
-7. [MySQL Database](#database)
-8. [API Endpoints](#api)
+3. [Configuration](#config)
+4. [Running the Code](#running-code)
+5. [App File](#App)
+6. [Database Utilities File](#util)
+7. [Main Application](#main)
+8. [MySQL Database](#database)
+9. [API Endpoints](#api)
     1. [GET /authors](#authors)
    2. [GET /books](#books)
    3. [POST /buy-book](#buy-book)
    4. [GET /stock](#stock)
    5. [GET /bonus](#bonus)
    6. [POST /donation](#donation)
-9. [Usage](#usage)
+10. [Usage](#usage)
 
 
 
 ---
 ### Scenario <a name="scenario"></a>
+The Code Queens have opened a chain of book shops, Seventh Heaven, with branches in Edinburgh, Glasgow, London and Sutton. 
 
 
+We have built a web application using Flask, to provide a user-friendly experience for book enthusiasts.
+This application enables customers to browse an extensive collection of books, explore genres and authors, and receive bonus book recommendations with discounts.
+
+
+Customers are able to make purchases across multiple branch locations, with a discount of 10% applied for purchases of 3 or more books. 
+We also have an exciting feature whereby customers are able to donate books to the branch of their choice.
+
+
+Explore our digital bookshelves and embark on a literary journey with the Code Queens’ Seventh Heaven Bookshop. 
+
+
+Enjoy book browsing!
+
+---
+### Installation Requirements <a name="installation"></a>
+**Install the following:**
+
+- Python 3.x
+- Flask
+- MySQL server
 
 ---
 ### Configuration <a name="config"></a>
@@ -63,22 +84,29 @@ Different team members can use their own config.py files with their own configur
 
 
 ---
-### Installation Requirements <a name="installation"></a>
-Install the following:
-
-- Python 3.x
-- Flask
-- MySQL server
-
----
 ### Running the Code <a name="running-code"></a>
-- Create and configure the config.py file as described in the Configuration section.
-- Ensure that your MySQL server is running.
-- Run the Flask application by executing the following command in your terminal:
-``````
-python app.py
-``````
-- The API will start running on http://127.0.0.1:5003 (the endpoints can be accessed via this URL)
+**Steps to run the application:**
+
+1. Clone the repository 
+   - Start by cloning the repository from the ‘group-7-api’ folder on Github. 
+   - Create a new project folder in your local repository.
+2. Activate a virtual environment 
+   - Navigate to your project folder and activate a virtual environment. This ensures a clean and isolated environment for the application.
+3. Install the required modules in your virtual environment using pip
+   - **Requests module** - used for making HTTP requests
+   - **Mysql-connector-python** - used for connecting to a MySQL database and executing SQL queries. 
+   - **Flask** - used to run the Flask web application in ‘app.py’
+   - Other modules and files that need to be imported are listed at the top of each file - these do not require separate installation, as they include built-in Python modules, project-specific files or modules that are automatically imported as part of the code.
+4. Configure the database connection 
+   - In the ‘config.py’ file, replace the ‘X’ placeholder information with your own MySQL Workbench database connection details - this ensure that the application can connect to your specific database.
+5. Database setup
+   - Open ‘bookshop.sql’ using MySQL workbench. 
+   - Use the SQL script to create the database named ‘seventhHeaven’ and the necessary tables - this step is essential to store and retrieve bookshop data effectively.
+6. Run app.py to start the Flask web application. Make sure it is successfully connected to a server.
+7. Then execute main.py, and you'll be greeted with a user-friendly menu to access a range of book browsing options.
+
+
+API endpoints can be accessed via this URL: http://127.0.0.1:5003 
 
 ---
 ### App File <a name="App"></a>
