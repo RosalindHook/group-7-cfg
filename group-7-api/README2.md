@@ -163,6 +163,26 @@ These include:
 
 ---
 ### Main Application <a name="main"></a>
+The **main.py file** is the central script of Code Queens' Seventh Heaven Bookshop. 
+
+This script offers several user-friendly features, allowing customers to browse, buy, explore genres and authors, and even receive bonus book recommendations with discounts. 
+
+Once the application is up and running, simply execute main.py, and you'll be greeted with a user-friendly menu to access the following features:
+
+1. **Browse Books:** The browse_books() function establishes a connection to the bookshop's backend through HTTP requests. 
+   - It retrieves a list of available books from the database (using GET endpoint) and displays them in a clear format. 
+   - Customers can view book titles, authors, and prices.
+2. Customers then have the option to **buy a book** or return to the main menu. 
+   - If they choose to make a purchase, the script guides them to the buying functionality (the buy_book() function), allowing customers to choose books and branch. 
+   - It verifies the availability and stock of a specific book in a chosen branch. 
+   - If the book is in stock, it updates the customer’s basket and adjusts the stock accordingly (using POST endpoint). 
+   - When a customer buys three or more books, they are rewarded with a 10% discount.
+3. **Explore genres and authors:** the explore_genres() and explore_authors() functions allow customers to explore books by either genre or author.
+   - It provides a list of all genres or authors stocked by Seventh Heaven. 
+   - Customers can then search for specific genres or authors and discover the matching books in the bookshop’s catalogues.
+4. **Random bonus:** The random_bonus() function treats customers by fetching a random selection of books from the database (GET endpoint). 
+   - Customers have the option to purchase these bonus books at a discounted price.
+5. ***Donate books: TBC***
 
 ---
 ### MySQL Database <a name="database"></a>
