@@ -101,4 +101,11 @@ The API interacts with a MySQL database named "seventhHeaven".
 The database contains tables for books, authors, genres, store branches, store owners, and book availability. 
 The tables are populated with sample data.
 
+### Usage
+This API is designed to be used by the Seventh Heaven Bookshop. 
+Cusotmers can  interact with the bookshop through the API and perform various actions.
+
+**Usage steps :**
+1. Start the API by running the file 'app.py'.
+2. Access the API endpoints to browse books, explore genres and authors, make purchases, get bonus book offers and donate books.
 
