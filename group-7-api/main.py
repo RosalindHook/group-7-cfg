@@ -104,15 +104,29 @@ def explore_authors():
     print("Exploring authors")
 
     author_search = input("\nEnter the author you want to explore: ").strip()
-    matching_books = db_utils.get_author_records()
 
-    if matching_books:
-        print("\nBooks by the selected author:")
-        for book in matching_books:
-            book_id, title, genre, price, stock = book
-            print(f"Book ID: {book_id}, Title: {title}, Genre: {genre}, Price: £{price:.2f}, Stock: {stock}")
+    # Retrieve a list of authors from the database
+    authors = db_utils.get_authors_records()
+
+    if authors:
+        print("\nAuthors available:")
+        for author in authors:
+            print(author[0])  # Assuming each row contains the author's full name
+
+        selected_author = input("\nEnter the Author's name to explore books by that author: ").strip()
+
+        # Retrieve books by the selected author
+        matching_books = db_utils.get_books_by_author_name(selected_author)  # Modify this function accordingly
+
+        if matching_books:
+            print(f"\nBooks available from {selected_author}:")
+            for book in matching_books:
+                book_id, title, author, price, stock = book
+                print(f"Book ID: {book_id}, Title: {title}, Author: {author}, Price: £{price:.2f}, Stock: {stock}")
+        else:
+            print(f"No books found by {selected_author}.")
     else:
-        print(f"No books found by '{author_search}' author.")
+        print("No authors found.")
 
 
 # function to run menu with options
