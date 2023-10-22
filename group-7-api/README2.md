@@ -55,4 +55,12 @@ Install the following:
 - Flask
 - MySQL server
 
-#
+### Running the Code
+- Create and configure the config.py file as described in the Configuration section.
+- Ensure that your MySQL server is running.
+- Run the Flask application by executing the following command in your terminal:
+``````
+python app.py
+``````
+- The API will start running on http://127.0.0.1:5003 (the endpoints can be accessed via this URL)
+
