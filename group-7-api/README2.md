@@ -28,32 +28,55 @@ The API allows users to browse books, explore various genres and authors, get bo
 ---
 ## Table of contents
 1. [Scenario](#scenario)
-2. [Configuration](#config)
 2. [Installation Requirements](#installation)
-3. [Running the Code](#running-code)
-4. [App File](#App)
-5. [Database Utilities File](#util)
-6. [Main Application](#main)
-7. [MySQL Database](#database)
-8. [API Endpoints](#api)
-    1. [GET /authors](#authors)
-   2. [GET /books](#books)
-   3. [POST /buy-book](#buy-book)
-   4. [GET /stock](#stock)
-   5. [GET /bonus](#bonus)
-   6. [POST /donation](#donation)
-9. [Usage](#usage)
+3. [Configuration](#config)
+4. [Running the Code](#running-code)
+5. [App File](#App)
+9. [API Endpoints](#api)
+    1. [get_authors()](#authors)
+   2. [get_books()](#books)
+   3. [buy_book()](#buy-book)
+   4. [get_stock_info()](#stock)
+   5. [get_bonus()](#bonus)
+   6. [POST DONATION (TBC)](#donation)
+6. [Database Utilities File](#util)
+7. [Main Application](#main)
+8. [MySQL Database](#database)
+10. [Usage](#usage)
 
 
 
 ---
-### Scenario <a name="scenario"></a>
+## Scenario <a name="scenario"></a>
+The Code Queens have opened a chain of bookshops, Seventh Heaven, with branches in Edinburgh, Glasgow, London and Sutton. 
 
 
+We have built a web application using Flask, to provide a user-friendly experience for book enthusiasts.
+This application enables customers to browse an extensive collection of books, explore genres and authors, and receive bonus book recommendations with discounts.
+
+
+Customers are able to make purchases across multiple branch locations, with a discount of 10% applied for purchases of 3 or more books. 
+We also have an exciting feature whereby customers are able to donate books to the branch of their choice.
+
+
+Explore our digital bookshelves and embark on a literary journey with the Code Queens’ Seventh Heaven Bookshop. 
+
+
+Enjoy book browsing!
 
 ---
-### Configuration <a name="config"></a>
-Before running the Code Queens' Bookshop API, you need to configure the database connection in the config.py file. Replace the following placeholders with your database information:
+## Installation Requirements <a name="installation"></a>
+**Install the following:**
+
+- Python 3.x
+- Flask
+- MySQL server
+
+---
+## Configuration <a name="config"></a>
+Before running the Code Queens' Bookshop API, you need to configure the database connection in the config.py file - this ensure that the application can connect to your specific database.
+
+Replace the following placeholders with your database information:
 ``````
 HOST = "X"  # Replace with your MySQL server host
 USER = "X"  # Replace with your MySQL username
@@ -63,65 +86,109 @@ Different team members can use their own config.py files with their own configur
 
 
 ---
-### Installation Requirements <a name="installation"></a>
-Install the following:
+## Running the Code <a name="running-code"></a>
+**Steps to run the application:**
 
-- Python 3.x
-- Flask
-- MySQL server
+1. Clone the repository 
+   - Start by cloning the repository from the ‘group-7-api’ folder on Github. 
+   - Create a new project folder in your local repository.
+2. Activate a virtual environment 
+   - Navigate to your project folder and activate a virtual environment. This ensures a clean and isolated environment for the application.
+3. Install the required modules in your virtual environment using pip
+   - **Requests module** - used for making HTTP requests
+   - **Mysql-connector-python** - used for connecting to a MySQL database and executing SQL queries. 
+   - **Flask** - used to run the Flask web application in ‘app.py’
+   - Other modules and files that need to be imported are listed at the top of each file - these do not require separate installation, as they include built-in Python modules, project-specific files or modules that are automatically imported as part of the code.
+4. Configure the database connection 
+   - In the ‘config.py’ file, replace the ‘X’ placeholder information with your own MySQL Workbench database connection details *(see configuration section for more info).*
+5. Database setup
+   - Open ‘bookshop.sql’ using MySQL workbench. 
+   - Use the SQL script to create the database named ‘seventhHeaven’ and the necessary tables - this step is essential to store and retrieve bookshop data effectively.
+6. Run app.py to start the Flask web application. Make sure it is successfully connected to a server.
+7. Then execute main.py, and you'll be greeted with a user-friendly menu to access a range of book browsing options.
+
+
+API endpoints can be accessed via this URL: http://127.0.0.1:5003 
 
 ---
-### Running the Code <a name="running-code"></a>
-- Create and configure the config.py file as described in the Configuration section.
-- Ensure that your MySQL server is running.
-- Run the Flask application by executing the following command in your terminal:
-``````
-python app.py
-``````
-- The API will start running on http://127.0.0.1:5003 (the endpoints can be accessed via this URL)
+## App File <a name="App"></a>
+The **App.py file** handles the core functionality and interaction with the database.
 
----
-### App File <a name="App"></a>
+### API Endpoints <a name="api"></a>
+
+
+#### get_authors() <a name="authors"></a>
+- Handles GET requests to the '/authors' route, providing a list of authors' records from the database as JSON.
+- URL: http://127.0.0.1:5003/authors
+
+#### get_books() <a name="books"></a>
+- Manages GET requests to the '/books' route, returning a list of all books as JSON.
+- URL: http://127.0.0.1:5003/books
+
+#### buy_book() <a name="buy-book"></a>
+- Creates an endpoint for POST requests to the '/buy-book' route, allowing customers to purchase books with availability checks and stock updates.
+- URL: http://127.0.0.1:5003/buy-book
+
+#### get_stock_info()  <a name="stock"></a>
+- Deals with GET requests to the '/stock' route, retrieving stock information for all books and branches.
+- URL: http://127.0.0.1:5003/stock
+
+#### get_bonus()  <a name="bonus"></a>
+- Provides bonus book recommendations through GET requests to the '/bonus' route.
+- URL: http://127.0.0.1:5003/bonus
+
+#### ***POST DONATION (TBC)*** <a name="donation"></a>
+- ***...allowing customers to donate used books to the bookshop.***
+- ***URL:***
+
 
 ---
 ### Database Utilities File <a name="util"></a>
+The **Db_utils.py file** is a collection of functions used to interact with the database.
+
+These include:
+1. **connect_to_db(db_name)**: Establishes a database connection and returns the connection object.
+2. **get_all_books()**: Retrieves a list of available books, including book ID, title, author, and price.
+3. **get_book_price(book_id)**: Retrieves a book's price based on its ID.
+4. **update_book_stock(book_id, branch_id, new_stock_count)**: Updates the stock count for a specific book in a branch.
+5. **get_genres()**: Retrieves available book genres.
+6. **get_books_by_genre_name(genre_search)**: Retrieves books matching a genre name.
+7. **get_authors_records()**: Retrieves a list of all authors' names.
+8. **get_books_by_author_name(author_name)**: Retrieves books by a specific author.
+9. **get_book_stock_info()**: Retrieves stock information for all books in all branches.
+10. **check_book_availability(book_id, branch_id)**: Checks book availability and stock in a branch.
+11. **get_random_books(num_books=3)**: Retrieves a list of random available books.
+12. ***TBC - Rebecca's function for interacting with the DB to donate books***
+
 
 ---
 ### Main Application <a name="main"></a>
+The **main.py file** is the central script of Code Queens' Seventh Heaven Bookshop. 
+
+This script offers several user-friendly features, allowing customers to browse, buy, explore genres and authors, and even receive bonus book recommendations with discounts. 
+
+Once the application is up and running, simply execute main.py, and you'll be greeted with a user-friendly menu to access the following features:
+
+1. **Browse Books:** The browse_books() function establishes a connection to the bookshop's backend through HTTP requests. 
+   - It retrieves a list of available books from the database (using GET endpoint) and displays them in a clear format. 
+   - Customers can view book titles, authors, and prices.
+2. Customers then have the option to **buy a book** or return to the main menu. 
+   - If they choose to make a purchase, the script guides them to the buying functionality (the buy_book() function), allowing customers to choose books and branch. 
+   - It verifies the availability and stock of a specific book in a chosen branch. 
+   - If the book is in stock, it updates the customer’s basket and adjusts the stock accordingly (using POST endpoint). 
+   - When a customer buys three or more books, they are rewarded with a 10% discount.
+3. **Explore genres and authors:** the explore_genres() and explore_authors() functions allow customers to explore books by either genre or author.
+   - It provides a list of all genres or authors stocked by Seventh Heaven. 
+   - Customers can then search for specific genres or authors and discover the matching books in the bookshop’s catalogues.
+4. **Random bonus:** The random_bonus() function treats customers by fetching a random selection of books from the database (GET endpoint). 
+   - Customers have the option to purchase these bonus books at a discounted price.
+5. ***Donate books: TBC***
 
 ---
 ### MySQL Database <a name="database"></a>
 The API interacts with a MySQL database named "seventhHeaven". 
 The database contains tables for books, authors, genres, store branches, store owners, and book availability. 
 The tables are populated with sample data.
-
----
-### API Endpoints <a name="api"></a>
-
-
-#### GET /authors <a name="authors"></a>
-- Retrieves a list of all authors available in the bookstore.
-- URL: http://127.0.0.1:5003/authors
-
-#### GET /books  <a name="books"></a>
-- Retrieves a list of all available books with details including Book ID, Title, Author, and Price.
-- URL: http://127.0.0.1:5003/books
-
-#### POST /buy-book <a name="buy-book"></a>
-- Allows customers to purchase a book by specifying the Book ID and the Branch ID they want to buy it from.
-- URL: http://127.0.0.1:5003/buy-book
-
-#### GET /stock  <a name="stock"></a>
-- Retrieves stock information for all books in all branches, including Book ID, Book Title, Branch Location, and Stock count.
-- URL: http://127.0.0.1:5003/stock
-
-#### GET /bonus  <a name="bonus"></a>
-- Provides a list of random bonus book offers. Customers can choose a book from the list and get it at a discounted price.
-- URL: http://127.0.0.1:5003/bonus
-
-#### POST /donation <a name="donation"></a>
-- Allows customers to donate a used book to the bookshop.
-- URL: 
 
 ---
 ### Usage <a name="usage"></a>
