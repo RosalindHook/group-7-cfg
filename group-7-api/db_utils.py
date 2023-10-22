@@ -187,6 +187,44 @@ def get_authors_records():
             db_connection.close()
             print("Connection closed")
 
+def get_books_by_author_name(author_name):
+    """
+    Retrieve a list of books containing author_name.
+
+    Args:
+        author_name (str): The partial or full author name to search for.
+
+    Returns:
+        list: A list of book records.
+    """
+
+    try:
+        db_name = 'seventhHeaven'
+        db_connection = _connect_to_db(db_name)
+        cur = db_connection.cursor()
+        print(f"Connected to database {db_name}")
+
+        query = """
+        SELECT books.bookID, books.title, genres.GenreName AS Genre, books.price
+        FROM books
+        INNER JOIN authors ON books.authorID = authors.authorID
+        INNER JOIN genres ON books.genreID = genres.genreID
+        WHERE CONCAT(authors.FirstName, ' ', authors.Surname) LIKE %s
+        """
+
+        cur.execute(query, (f'%{author_name}%',))  # Use % for wildcard matching
+        results = cur.fetchall()
+        return results
+
+    except Exception as exc:
+        print(exc)
+        return None
+
+    finally:
+        if db_connection:
+            db_connection.close()
+
+
 
 # Called in option 4 of run() menu in main.
 # Stored procedure - Checks if book available, which store, price by title name of book
