@@ -112,7 +112,9 @@ API endpoints can be accessed via this URL: http://127.0.0.1:5003
 
 ---
 ## App File <a name="App"></a>
-The **App.py file** handles the core functionality and interaction with the database.
+The **App.py file** serves as the core of the Code Queens' Bookshop API. 
+
+It is responsible for handling the fundamental functionality of the application and acts as the interface between the user and the database.
 
 ### API Endpoints <a name="api"></a>
 
