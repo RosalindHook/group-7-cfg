@@ -42,19 +42,19 @@ Our team employed the following methods for effective collaboration on part 1 of
 
 2. **Slack communication:** We maintained a dedicated Slack channel for real-time support and to distribute tasks among team members. Slack was also helpful in addressing issues, such as resolving merge conflicts. We broadly followed the process outlined in the following workflow diagram:
 
-![Alt Workflow diagram](https://github.com/RosalindHook/group-7-cfg/blob/main/workflow-diagram.png)
+![Alt Workflow diagram](https://github.com/RosalindHook/group-7-cfg/blob/API-branch/workflow-diagram.png)
 
 3. **Trello task management:** To keep our work organised and transparent, we used a Trello board. This board allowed us to track, assign, and manage tasks efficiently.
 
-![Alt Our Trello board](https://github.com/RosalindHook/group-7-cfg/blob/main/trello-board.png)
+![Alt Our Trello board](https://github.com/RosalindHook/group-7-cfg/blob/API-branch/trello-board.png)
 
 4. **Branch workflow:** Each team member contributed through separate branches. We followed a structured process of peer review and pull request merging to ensure the quality of our code and documentation.
 
-![Alt Branching and merging for part 1](https://github.com/RosalindHook/group-7-cfg/blob/main/branching-diagram.png)
+![Alt Branching and merging for part 1](https://github.com/RosalindHook/group-7-cfg/blob/API-branch/branching-diagram.png)
 
 5. **Sli.do Feedback:** We used Sli.do to gather feedback, collaborate, and reach consensus on our team name and slogan, ensuring that our decisions were collective and inclusive.
 
-![Alt Slid.do voting](https://github.com/RosalindHook/group-7-cfg/blob/main/slido-name-vote.png)
+![Alt Slid.do voting](https://github.com/RosalindHook/group-7-cfg/blob/API-branch/slido-name-vote.png)
 
 :raised_hands: Our collaborative efforts have contributed to the success of part 1 of this assignment...
 
