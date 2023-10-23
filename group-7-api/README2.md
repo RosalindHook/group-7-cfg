@@ -211,7 +211,7 @@ Below is an overview of the tables in the database:
 4. **Store Branches**: Contains data related to the different branches of Seventh Heaven bookshops in Edinburgh, Glasgow, London, and Sutton.
 5. **Store Owners**: Maintains records of store owners who manage each branch.
 6. **Book Availability**: Tracks the availability and stock of each book in every branch. This data is used to ensure customers can purchase books that are in stock.
-7. ***DONATIONS? : TBC***
+7. **Donations**: An empty table that gets populated with data about books which customers would like to donate.
 
 The tables are pre-populated with sample data to demonstrate the functionality of our API. You can modify, extend, or populate these tables with your own data as needed.
 
