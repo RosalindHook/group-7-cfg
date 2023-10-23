@@ -51,6 +51,15 @@ CREATE TABLE bookAvailability (
     Stock INT
 );
 
+CREATE TABLE donated_books (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    author VARCHAR(255) NOT NULL,
+    genre VARCHAR(255),
+    `condition` VARCHAR(255),
+    description TEXT
+);
+
 -- Populating tables with data
 -- Adding data into the Genres table
 INSERT INTO Genres (GenreID, GenreName)
