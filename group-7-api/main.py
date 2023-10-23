@@ -78,7 +78,7 @@ def buy_book():
             print(f"New Total Price: £{total_price:.2f}")
 
         # Allow user to purchase another book
-        buy_option = input("Do you want to purchase another book: ").strip().lower()
+        buy_option = input("Do you want to purchase another book? (Y/N): ").strip().lower()
         if buy_option != "y":
             print(f"Basket contains {books_purchased} books.")
             print(f"Total Price: £{total_price:.2f}")
@@ -176,9 +176,12 @@ def donate_book():
     condition = input("Enter the condition of the book: ")
     description = input("Enter a description of the book: ")
 
-    # Insert the donated book into the database
-    db_utils.insert_donated_book(title, author, genre, condition, description)
-    print("Book donation successful!")
+    # Try to insert the donated book into the database
+    try:
+        db_utils.insert_donated_book(title, author, genre, condition, description)
+        print("Book donation successful!")
+    except Exception as e:
+        print(f"Failed to donate the book: {e}")
 
 
 # function to run menu with options
