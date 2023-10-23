@@ -213,7 +213,7 @@ Below is an overview of the tables in the database:
 6. **Book Availability**: Tracks the availability and stock of each book in every branch. This data is used to ensure customers can purchase books that are in stock.
 7. **Donations**: An empty table that gets populated with data about books which customers would like to donate.
 
-The tables are pre-populated with sample data to demonstrate the functionality of our API. You can modify, extend, or populate these tables with your own data as needed.
+The tables are pre-populated with sample data (except the donations table) to demonstrate the functionality of our API. You can modify, extend, or populate these tables with your own data as needed.
 
 
 ---
@@ -227,7 +227,7 @@ Below are the steps to use the API:
 3. **Explore Genres and Authors**: The API provides functionality to explore books by genres and authors. You can discover books that match specific genres or authors and explore the bookshop's catalog.
 4. **Make Purchases**: Customers can use the API to purchase books from different branches. The API checks book availability, and when customers buy three or more books, they receive a 10% discount on their purchase.
 5. **Get Bonus Book Offers**: The API offers a feature to receive random bonus book recommendations at discounted prices. Customers can choose to buy these bonus books.
-6. ***Donate Books (TBC): Customers can use the API to donate used books to the bookshop, making it easy for them to contribute to the bookshop's collection.***
+6. **Donate Books**: Customers can use the API to donate used books to the bookshop, making it easy for them to contribute to the bookshop's collection.
 
 With these features, the Code Queens' Bookshop API provides a comprehensive tool for managing and enhancing the book-buying experience. 
 Customers can explore, purchase, and contribute to the bookshop through a user-friendly interface.
