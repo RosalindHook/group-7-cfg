@@ -367,3 +367,28 @@ def get_random_books(num_books=3):
     finally:
         if db_connection:
             db_connection.close()
+
+def insert_donated_book(title, author, genre, condition, description):
+    try:
+        db_name = 'seventhHeaven'
+        db_connection = _connect_to_db(db_name)
+        cur = db_connection.cursor()
+
+        # SQL query to insert the donated book details into the database
+        insert_query = """
+            INSERT INTO donated_books (title, author, genre, `condition`, description)
+            VALUES (%s, %s, %s, %s, %s)
+        """
+        data = (title, author, genre, condition, description)
+
+        cur.execute(insert_query, data)
+        db_connection.commit()
+
+
+    except Exception as e:
+        print(f"Failed to insert book donation: {str(e)}")
+
+    finally:
+        if db_connection:
+            cur.close()
+            db_connection.close()
