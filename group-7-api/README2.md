@@ -210,5 +210,5 @@ Below are the steps to use the API:
 With these features, the Code Queens' Bookshop API provides a comprehensive tool for managing and enhancing the book-buying experience. 
 Customers can explore, purchase, and contribute to the bookshop through a user-friendly interface.
 
-We hope you enjoy using the Code Queens' Bookshop API!
+**We hope you enjoy using the Code Queens' Bookshop API!**
 
