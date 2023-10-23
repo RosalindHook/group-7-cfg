@@ -180,7 +180,7 @@ def donate_book():
     db_utils.insert_donated_book(title, author, genre, condition, description)
     print("Book donation successful!")
 
-    
+
 # function to run menu with options
 def run():
     print(banner)
@@ -191,6 +191,7 @@ def run():
             2 - Explore genres
             3 - Explore authors
             4 - Get bonus
+            5 - Donate a second-hand book
             E - Exit the bookshop
             ''').lower()
 
@@ -202,6 +203,8 @@ def run():
             explore_authors()
         elif menu_choice == "4":
             random_bonus()  # for getting bonus
+        elif menu_choice == "5":
+            donate_book()  # Call a function to donate book
         elif menu_choice == "e":
             print("Exiting the book shop - goodbye!")
             break
