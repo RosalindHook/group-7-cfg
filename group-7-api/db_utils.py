@@ -164,7 +164,7 @@ def get_books_by_genre_name(genre_search):
         list: A list of books with matching genre names.
     """
     try:
-        db_name = 'seventhheaven'
+        db_name = 'seventhHeaven'
         db_connection = _connect_to_db(db_name)
         cur = db_connection.cursor()
         print(f'Connected to database: {db_name}')
@@ -203,7 +203,7 @@ def get_authors_records():
             list: A list of authors names
         """
     try:
-        db_name = 'seventhheaven'
+        db_name = 'seventhHeaven'
         db_connection = _connect_to_db(db_name)
         cur = db_connection.cursor()
         print(f'Connect to database: {db_name}')
