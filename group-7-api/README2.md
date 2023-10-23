@@ -7,7 +7,7 @@ Group 7's planned scenario is managing a bookshop.
 Other requirements for this assignment are:
 
 - [X] Implement API endpoints with appropriate functionality
-- [ ] Implement one additional endpoint of your choice (can be POST or GET but with a different implementation)
+- [X] Implement one additional endpoint of your choice (can be POST or GET but with a different implementation)
 - [X] Implement client-side for the 3 API endpoints
 - [X] Create a MySQL database with at least 1 table
 - [X] Have a config file (do not leave your private information here)
@@ -129,7 +129,6 @@ It is responsible for handling the fundamental functionality of the application 
 
 #### buy_book() <a name="buy-book"></a>
 - Creates an endpoint for POST requests to the '/buy-book' route, allowing customers to purchase books with availability checks and stock updates.
-- URL: http://127.0.0.1:5003/buy-book
 
 #### get_stock_info()  <a name="stock"></a>
 - Deals with GET requests to the '/stock' route, retrieving stock information for all books and branches.
@@ -139,9 +138,8 @@ It is responsible for handling the fundamental functionality of the application 
 - Provides bonus book recommendations through GET requests to the '/bonus' route.
 - URL: http://127.0.0.1:5003/bonus
 
-#### ***POST DONATION (TBC)*** <a name="donation"></a>
-- ***...allowing customers to donate used books to the bookshop.***
-- ***URL:***
+#### donate_book() <a name="donation"></a>
+- Allows customers to donate used books to the second-hand section of the bookshop.
 
 
 ---
@@ -171,7 +169,8 @@ These include:
     - Checks book availability and stock in a branch.
 11. **get_random_books(num_books=3)**
     - Retrieves a list of random available books.
-12. ***TBC - Rebecca's function for interacting with the DB to donate books***
+12. **insert_donated_book(title, author, genre, condition, description)**
+    - Inserts user data about used books.
 
 
 ---

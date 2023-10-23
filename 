@@ -1,0 +1,1234 @@
+[33mcommit 5b4631d337a6734cecdeabd6d38e1323385b5ada[m[33m ([m[1;36mHEAD -> [m[1;32mAPI-branch[m[33m)[m
+Author: RebJo16 <rebeccatognini@gmail.com>
+Date:   Mon Oct 23 13:38:19 2023 +0100
+
+    Imported insert_donated_books from db_utils to app.py and added POST request to app.py
+
+[33mcommit 6fb5c107c5c695574cfe3177f6aec9c4687b226f[m[33m ([m[1;31mgroup-7-cfg/API-branch[m[33m)[m
+Author: RebJo16 <rebeccatognini@gmail.com>
+Date:   Mon Oct 23 13:33:56 2023 +0100
+
+    Added insert_donated_book function to db_utils
+
+[33mcommit ff6706606d2804ea8b5f6840af5466d1f5598e2d[m
+Author: RebJo16 <rebeccatognini@gmail.com>
+Date:   Mon Oct 23 13:30:09 2023 +0100
+
+    Added menu choice 5 to Donate a second hand book and added elif menu choice 5 to call the function donate_book()
+
+[33mcommit 29ec59f31819d9be08bb98aea65f991507466507[m
+Author: RebJo16 <rebeccatognini@gmail.com>
+Date:   Mon Oct 23 13:27:48 2023 +0100
+
+    Added a function for donating a book and linking to db_utils
+
+[33mcommit 65b3f7aa9ba0df5be97e6120a0e41478ff001422[m
+Author: RebJo16 <rebeccatognini@gmail.com>
+Date:   Mon Oct 23 13:05:15 2023 +0100
+
+    Created a table for storing donated book data
+
+[33mcommit d0e4ae9492456af6ee1d973ffcb7721ce7ac201a[m
+Merge: f882952 1f4038d
+Author: OlgaChumak13 <olgabuh10@ukr.net>
+Date:   Mon Oct 23 09:05:59 2023 +0100
+
+    Merge branch 'API-branch' of github.com:RosalindHook/group-7-cfg into API-branch
+
+[33mcommit f882952a5aa99ebe8ca58286c53ce545ee480706[m
+Author: OlgaChumak13 <olgabuh10@ukr.net>
+Date:   Mon Oct 23 09:03:56 2023 +0100
+
+    edited my part
+
+[33mcommit 1f4038dc5392287e2e6d74696fb74216be8cee2d[m
+Merge: 81b738a d62a93f
+Author: Sriya <144058982+sriyavemuru@users.noreply.github.com>
+Date:   Mon Oct 23 00:31:09 2023 +0100
+
+    Merge pull request #42 from sriya-api branch
+    
+    adding emojis :)
+
+[33mcommit d62a93ff3dd8392da92a2b99e55a848981eb76bd[m[33m ([m[1;31mgroup-7-cfg/sriya-api[m[33m)[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Mon Oct 23 00:30:03 2023 +0100
+
+    adding emoojis :)
+
+[33mcommit 81b738ae9d601ed4d6de939a3d1856533e38c2ed[m
+Merge: b7de79f 332cf3e
+Author: Sriya <144058982+sriyavemuru@users.noreply.github.com>
+Date:   Mon Oct 23 00:11:50 2023 +0100
+
+    Merge pull request #41 from sriya-api branch
+    
+    Updated documentation
+
+[33mcommit 332cf3ec3bd975c6f2b3d5d9f5066a9d9ed9538b[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Mon Oct 23 00:10:31 2023 +0100
+
+    updated README2.md
+
+[33mcommit b2d012400cb00bd48cbba8da7c91e403b8976ba9[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Mon Oct 23 00:09:14 2023 +0100
+
+    updated db_utils section
+
+[33mcommit b7de79f99551c9be31281a62cb0fbf7115169fb2[m
+Merge: f7906b2 c24650a
+Author: Sriya <144058982+sriyavemuru@users.noreply.github.com>
+Date:   Mon Oct 23 00:05:18 2023 +0100
+
+    Merge pull request #40 from sriya-api branch
+    
+    updated app.py
+
+[33mcommit c24650a03aeca53fcd542f32984d67ad4028f2db[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Mon Oct 23 00:03:41 2023 +0100
+
+    updated app.py
+
+[33mcommit f7906b290d15dad8cab35bb9fb9ae006b59e2262[m
+Merge: 4e119f5 2839e1a
+Author: Sriya <144058982+sriyavemuru@users.noreply.github.com>
+Date:   Mon Oct 23 00:00:59 2023 +0100
+
+    Merge pull request #39 from sriya-api branch
+    
+    updated app file section
+
+[33mcommit 2839e1a1ae8ab070d91fd5250e269fadd4c22664[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sun Oct 22 23:54:01 2023 +0100
+
+    updated app file section
+
+[33mcommit 4e119f521e7b13d4c45f03616cdae7a7584a11a1[m
+Merge: 4bbebdf 14108d7
+Author: Sriya <144058982+sriyavemuru@users.noreply.github.com>
+Date:   Sun Oct 22 23:51:23 2023 +0100
+
+    Merge pull request #38 from sriya-api branch
+    
+    updated documentation
+
+[33mcommit 14108d7420a7a0947ff786c4213352cc8653fc32[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sun Oct 22 23:50:15 2023 +0100
+
+    updated usage section
+
+[33mcommit 547a49cdb1a65f4c1a0d7a965c80120f87ac379d[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sun Oct 22 23:49:55 2023 +0100
+
+    updated database section
+
+[33mcommit 4bbebdf161ddeec2855f790d677ddf67a15d7433[m
+Merge: 546fdb7 19de650
+Author: Sriya <144058982+sriyavemuru@users.noreply.github.com>
+Date:   Sun Oct 22 23:37:37 2023 +0100
+
+    Merge pull request #37 from sriya-api branch
+    
+    update to documentation
+
+[33mcommit 19de65056781ba03abbb61e1123c3f3f986f8b3e[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sun Oct 22 23:35:57 2023 +0100
+
+    updated main section
+
+[33mcommit 45e5abc223caed16056e741946961e5b4ecad3c6[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sun Oct 22 23:30:39 2023 +0100
+
+    updated db_utils section
+
+[33mcommit ae90f89c95033a1fbbd87da18b903aea35d6eec7[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sun Oct 22 23:26:34 2023 +0100
+
+    updated API endpoints
+
+[33mcommit 3e189e988a25d80fbda4fa59661e6619945a90bb[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sun Oct 22 23:16:22 2023 +0100
+
+    updated App file section
+
+[33mcommit 6a70db70f1fd627e85e1dd341c574908159e4bea[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sun Oct 22 23:09:14 2023 +0100
+
+    updated running the code section
+
+[33mcommit 546fdb7a3c407e90518ad4d0e8d0849cc9a3cd13[m
+Merge: 62d5aa4 9a6d3cd
+Author: Sriya <144058982+sriyavemuru@users.noreply.github.com>
+Date:   Sun Oct 22 22:48:18 2023 +0100
+
+    Merge pull request #36 from RosalindHook/sriya-api
+    
+    formatting
+
+[33mcommit 9a6d3cdf3f72e2bdad1d93563ece92f208a8c804[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sun Oct 22 22:42:19 2023 +0100
+
+    formatting
+
+[33mcommit 62d5aa49b826b62b249f69d9f467f82d3a6439ac[m
+Merge: f88d36a 6fe4d39
+Author: Sriya <144058982+sriyavemuru@users.noreply.github.com>
+Date:   Sun Oct 22 22:37:32 2023 +0100
+
+    Merge pull request #35
+    
+    edit to table of contents
+
+[33mcommit 6fe4d398f73384d969c14b688f90cb528301ece4[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sun Oct 22 22:36:38 2023 +0100
+
+    edit to table of contents
+
+[33mcommit f88d36a771e5f773cda41782b2c4e6a84fff3678[m
+Merge: 1190510 32e40e2
+Author: Sriya <144058982+sriyavemuru@users.noreply.github.com>
+Date:   Sun Oct 22 22:31:54 2023 +0100
+
+    Merge pull request #34 from RosalindHook/sriya-api
+    
+    added table of contents
+
+[33mcommit 32e40e2cdc44374c629a2285fcda5a916ff92862[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sun Oct 22 22:31:08 2023 +0100
+
+    added table of contents
+
+[33mcommit 1190510431c16983467868e0b2f5c591255c815a[m
+Merge: c4d3ab0 00326ca
+Author: Sriya <144058982+sriyavemuru@users.noreply.github.com>
+Date:   Sun Oct 22 21:54:19 2023 +0100
+
+    Merge pull request #33 from RosalindHook/sriya-api
+    
+    Update Documentation file
+
+[33mcommit 00326caa74bbc9376737eae2e722221225c0ff3f[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sun Oct 22 21:53:17 2023 +0100
+
+    added usage section
+
+[33mcommit 49e0164e2737bff2360f04ffca70a9041751f7eb[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sun Oct 22 21:47:33 2023 +0100
+
+    added database section
+
+[33mcommit b542563d2f07bb9f9e7812834b208584afdc74c5[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sun Oct 22 21:45:26 2023 +0100
+
+    added API endpoints section
+
+[33mcommit 0fb8a507d7433fcd0961bc960facdc087715b940[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sun Oct 22 21:38:20 2023 +0100
+
+    added running the code section
+
+[33mcommit fce5fc8aef982fd48931636d5b7d2f70626cff05[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sun Oct 22 21:35:56 2023 +0100
+
+    added installation requirements
+
+[33mcommit 074c72bc1fae830d92624eeef444ede2c7f9fbc4[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sun Oct 22 21:33:56 2023 +0100
+
+    added configuration to codumentation
+
+[33mcommit 7fd027614f335a701329dd1e096bdb2794a45e43[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sun Oct 22 21:28:32 2023 +0100
+
+    added documentation
+
+[33mcommit c4d3ab01310e141f76ae57883dc5a1ab6ebc4bc4[m
+Author: Sriya <144058982+sriyavemuru@users.noreply.github.com>
+Date:   Sun Oct 22 21:16:28 2023 +0100
+
+    Updated README2.md
+
+[33mcommit 54712e3990ea217628caf9248539e9bcd6118165[m
+Author: Sriya <144058982+sriyavemuru@users.noreply.github.com>
+Date:   Sun Oct 22 17:27:14 2023 +0100
+
+    updated code for clarity
+
+[33mcommit dae0863938d4edef03ae739a31531a5024061930[m
+Author: Sriya <144058982+sriyavemuru@users.noreply.github.com>
+Date:   Sun Oct 22 17:03:04 2023 +0100
+
+    Update main.py
+
+[33mcommit a9fe10bc165929b158c1bb4346ea04d7e808cf16[m
+Merge: 0f5f294 f3fea99
+Author: Ros <123762126+RosalindHook@users.noreply.github.com>
+Date:   Sun Oct 22 16:37:50 2023 +0100
+
+    Merge pull request #32 from RosalindHook/Ros-API
+    
+    Changes to api.py, main.py and db_utils.py
+
+[33mcommit f3fea9918878095591199462c911e12bb1030562[m[33m ([m[1;31mgroup-7-cfg/Ros-API[m[33m)[m
+Merge: fdcdaa1 0f5f294
+Author: Ros <123762126+RosalindHook@users.noreply.github.com>
+Date:   Sun Oct 22 16:37:37 2023 +0100
+
+    Merge branch 'API-branch' into Ros-API
+
+[33mcommit fdcdaa149cfe50a05fdba3a3f15556d155dbc7d9[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sun Oct 22 16:21:18 2023 +0100
+
+    debug buy_book
+
+[33mcommit 8f8a5491088c5ad63baa96f790a3ba6742fba711[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sun Oct 22 16:20:45 2023 +0100
+
+    add update_book_stock to imported from db_utils
+
+[33mcommit 0f5f294f23d4b8ce9beaf952741639371c2682bc[m
+Author: OlgaChumak13 <olgabuh10@ukr.net>
+Date:   Sun Oct 22 16:12:46 2023 +0100
+
+    Add function bonus from rundom books p/4
+
+[33mcommit 5b8e8d80a25b3411cf1f1a797e2781492f9afffa[m
+Author: OlgaChumak13 <olgabuh10@ukr.net>
+Date:   Sun Oct 22 16:10:57 2023 +0100
+
+    Add to app.py function get thre rundom books
+
+[33mcommit 2b369b676f8ff2711b021931acc9dcb17742a5bb[m
+Author: OlgaChumak13 <olgabuh10@ukr.net>
+Date:   Sun Oct 22 16:05:17 2023 +0100
+
+    Add function to choose three rundom books
+
+[33mcommit 5595e762a75968df088be148424089d3950aba7b[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sun Oct 22 15:56:26 2023 +0100
+
+    change get_book_stock_info function to return more meaningful info
+
+[33mcommit f995a29806918a45c1d3577558260a872ce1bba0[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sun Oct 22 15:55:58 2023 +0100
+
+    change dictionary list for get_stock_info to match db_utils function
+
+[33mcommit f250ae142926a9e75ed1051925cb4006f64ffa4b[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sun Oct 22 15:15:45 2023 +0100
+
+    debugging get_book_stock_info
+
+[33mcommit bd12d4b62832f4d922602016bc15e7bda22bfd63[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sun Oct 22 15:05:57 2023 +0100
+
+    new function to get stock info
+
+[33mcommit b9bbea7bddb183c8359b64a5ce1c54f218fccd69[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sun Oct 22 15:03:20 2023 +0100
+
+    get_stock_info function for new endpoint
+
+[33mcommit b615d3a483c3a9ab8d24788c341f06b40f2d48d5[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sun Oct 22 14:55:09 2023 +0100
+
+    amend buy_book
+
+[33mcommit 98c76e28c872d6a15641f71f1ad8b355a6bf1913[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sun Oct 22 14:52:43 2023 +0100
+
+    new function update_book_stock
+
+[33mcommit a6947a466447a78cac11033b762c12581a0ec31b[m
+Merge: b5b71b0 e6c7c9e
+Author: OlgaChumak13 <olgabuh10@ukr.net>
+Date:   Sun Oct 22 14:49:33 2023 +0100
+
+    Merge branch 'API-branch' of github.com:RosalindHook/group-7-cfg into API-branch
+
+[33mcommit b5b71b0079ffadce75c93c2824102cad7237436c[m
+Author: OlgaChumak13 <olgabuh10@ukr.net>
+Date:   Sun Oct 22 14:49:25 2023 +0100
+
+    Check function
+
+[33mcommit 7016073d0793ba87cfe047dd4f83eb246afe3893[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sun Oct 22 14:35:28 2023 +0100
+
+    update buy_book function
+
+[33mcommit 94fe6249cbdf87140fae68e615a4752b2c75806b[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sun Oct 22 14:24:44 2023 +0100
+
+    new buy-book route
+
+[33mcommit 190fe64989cf5352afabf1dfef94a57d257d51a8[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sun Oct 22 14:17:06 2023 +0100
+
+    update buy_book function to send POST request
+
+[33mcommit e6c7c9e0a560a44eb468de0bfefdcb23d0782f16[m
+Merge: 9f83d7b 5ed9b31
+Author: Ros <123762126+RosalindHook@users.noreply.github.com>
+Date:   Sun Oct 22 13:45:37 2023 +0100
+
+    Merge pull request #31 from RosalindHook/Ros-API
+    
+    functions in db_utils and main.py to explore authors debugged
+
+[33mcommit 5ed9b31ca8be72ba370645717dd88a5fc7683dfd[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sun Oct 22 13:42:00 2023 +0100
+
+    author functions updated and debugged
+
+[33mcommit aa547ed076311f9b1a31e4a1ce8519b0c9fc91da[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sun Oct 22 13:34:44 2023 +0100
+
+    review explore_authors function
+
+[33mcommit c918bbc3493865f6e42f3065186eda5de662ff57[m
+Merge: 5f784a8 9f83d7b
+Author: OlgaChumak13 <olgabuh10@ukr.net>
+Date:   Sun Oct 22 13:18:28 2023 +0100
+
+    Merge branch 'API-branch' of github.com:RosalindHook/group-7-cfg into API-branch
+
+[33mcommit 5f784a8451a436079b9dda56e9c523b055a6b3ec[m
+Author: OlgaChumak13 <olgabuh10@ukr.net>
+Date:   Sun Oct 22 13:18:05 2023 +0100
+
+    add return nono to exept function authors
+
+[33mcommit 9f83d7b9efdc9625f79841cfaa1a0e2ede620dbb[m
+Author: Sriya <144058982+sriyavemuru@users.noreply.github.com>
+Date:   Sun Oct 22 12:13:59 2023 +0100
+
+    Update db_utils.py
+
+[33mcommit 291edb5f2b3ef23efd4a1414359fd0806fb029af[m
+Merge: 449be8f 2c1e115
+Author: Sriya <144058982+sriyavemuru@users.noreply.github.com>
+Date:   Sun Oct 22 12:13:00 2023 +0100
+
+    Merge pull request #30 from RosalindHook/sriya-api
+    
+    added get author by name function
+
+[33mcommit 2c1e11563160ecd4c3c6a80b30c407359d4564d7[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sun Oct 22 12:11:12 2023 +0100
+
+    added get author by name function
+
+[33mcommit 449be8f06743c7b6932ad857c797f3db3db17c7d[m
+Author: Sriya <144058982+sriyavemuru@users.noreply.github.com>
+Date:   Sun Oct 22 12:03:35 2023 +0100
+
+    Update main.py
+
+[33mcommit a16f5652647995e664e48a091a400ebc1e2be846[m
+Author: Sriya <144058982+sriyavemuru@users.noreply.github.com>
+Date:   Sun Oct 22 12:02:36 2023 +0100
+
+    Updated get authors function
+
+[33mcommit 10cda2765acde966b0b6fa0bf6af9acd0e40cc7e[m
+Merge: 4a3d029 d990bb2
+Author: Sriya <144058982+sriyavemuru@users.noreply.github.com>
+Date:   Sun Oct 22 12:00:07 2023 +0100
+
+    Merge pull request #29 from RosalindHook/sriya-api
+    
+    Sriya api
+
+[33mcommit d990bb2aaf06070d72390dfd6d4a590300bb4d63[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sun Oct 22 11:49:59 2023 +0100
+
+    updated get authors function
+
+[33mcommit 2891386785ca3d21eda26ac072a54a6eec6d15d6[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sun Oct 22 11:45:10 2023 +0100
+
+    updated get authors function
+
+[33mcommit 3a87f32691e4850b62f0208caafde09bad83a397[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sat Oct 21 20:21:17 2023 +0100
+
+    debugging function
+
+[33mcommit 12f9de684824a9a89a9977ce3416284f204920e8[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sat Oct 21 20:08:17 2023 +0100
+
+    use request library to send GET request and receive book data
+
+[33mcommit 072fbfdcaa55f627e52716a3d9cfde4a65226d1d[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sat Oct 21 19:59:24 2023 +0100
+
+    add to get_books function in app.py to support functionality in main.py
+
+[33mcommit 498a9a423e5c675dc08ba539f5c3384fd8d5ffe1[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sat Oct 21 18:25:02 2023 +0100
+
+    debug explore_genres function and get_genres
+
+[33mcommit 3bda5998679329c77fa228ccbb9a3f54608a5cf6[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sat Oct 21 18:14:35 2023 +0100
+
+    change functions to return only genre_name
+
+[33mcommit 9f6723efcaa5721ca62b8b1a7a742b7177d65b16[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sat Oct 21 18:07:57 2023 +0100
+
+    new function get_books_by_genre_name
+
+[33mcommit 5a845ec477f48c8a2299645e640508b52da6cdbd[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sat Oct 21 18:01:38 2023 +0100
+
+    update explore_genres function to return tuples
+
+[33mcommit 765fdcdf28ca52e5f27ee1b7b21889e3d16b1631[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sat Oct 21 17:53:05 2023 +0100
+
+    make user input in buy books function always lower case
+
+[33mcommit 86fb54b16d9c8def959713b65e7bb2f2399951e4[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sun Oct 22 11:38:52 2023 +0100
+
+    updated get authors function
+
+[33mcommit 4a3d029c8dfa922a7c9e2bd83998dacf880d69fd[m
+Merge: 81e2261 eaaa6b0
+Author: Sriya <144058982+sriyavemuru@users.noreply.github.com>
+Date:   Sun Oct 22 11:09:50 2023 +0100
+
+    Merge pull request #28 from RosalindHook/sriya-api
+    
+    updated gitignore
+
+[33mcommit eaaa6b0a54a13be5382b21b0c898fce69924ec73[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sun Oct 22 11:08:25 2023 +0100
+
+    updated gitignore
+
+[33mcommit 81e2261fb509308a45dfb90f6280d23a95325368[m
+Merge: e1801ab b193a25
+Author: Ros <123762126+RosalindHook@users.noreply.github.com>
+Date:   Sat Oct 21 20:22:31 2023 +0100
+
+    Merge pull request #27 from RosalindHook/Ros-API
+    
+    update function get_books in app.py and change function in main correspondingly
+
+[33mcommit b193a2543a6e917875ed8296cbc5de25f9e36818[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sat Oct 21 20:21:17 2023 +0100
+
+    debugging function
+
+[33mcommit 3ebb98a43fa7dd03c3a76286bd8c3100fd6c043b[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sat Oct 21 20:08:17 2023 +0100
+
+    use request library to send GET request and receive book data
+
+[33mcommit 2c5fb88b44f7fd9153e761adb6c1267cc5c5f569[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sat Oct 21 19:59:24 2023 +0100
+
+    add to get_books function in app.py to support functionality in main.py
+
+[33mcommit e1801ab1d7aa9ea7320c4ad9117c75fed19b7959[m
+Merge: 76d312b 315ea54
+Author: Ros <123762126+RosalindHook@users.noreply.github.com>
+Date:   Sat Oct 21 18:29:02 2023 +0100
+
+    Merge pull request #26 from RosalindHook/Ros-API
+    
+    debug main.py and create new functions in db_utils.py
+
+[33mcommit 315ea54f7141522637b9c5c7304b7a90da42e25d[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sat Oct 21 18:25:02 2023 +0100
+
+    debug explore_genres function and get_genres
+
+[33mcommit 76d312bf6aa32c853da1b7ea997bb56429b00d2f[m
+Merge: a61b3f2 c5259ea
+Author: Sriya <144058982+sriyavemuru@users.noreply.github.com>
+Date:   Sat Oct 21 18:17:57 2023 +0100
+
+    Merge pull request #25 from RosalindHook/sriya-api
+    
+    Sriya api
+
+[33mcommit c5259eabfed527d7daa9840d23b2ac506ba786de[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sat Oct 21 18:17:09 2023 +0100
+
+    Remove .DS_Store files and update .gitignore
+
+[33mcommit 932973f95a55ae2729ea9ba83367c2cca117c543[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sat Oct 21 18:14:35 2023 +0100
+
+    change functions to return only genre_name
+
+[33mcommit 0afb471f35425fbce2cee5a9789734754163276e[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sat Oct 21 18:12:26 2023 +0100
+
+    new query to get books
+
+[33mcommit 680ed90d05a5a52d60678f4a4c0653c1fadc0076[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sat Oct 21 17:05:21 2023 +0100
+
+    "commit ."
+
+[33mcommit 22aa8605c4fa2115fe8e1dd6b8f1bec26ef08bce[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sat Oct 21 18:07:57 2023 +0100
+
+    new function get_books_by_genre_name
+
+[33mcommit a61b3f2bb67a0786f0485feeb6658da7c527756f[m
+Author: Sriya <144058982+sriyavemuru@users.noreply.github.com>
+Date:   Sat Oct 21 18:06:04 2023 +0100
+
+    Updated .gitignore
+
+[33mcommit 5ea8f57fbfe883f162957e83101bd53c7b97aff1[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sat Oct 21 18:01:38 2023 +0100
+
+    update explore_genres function to return tuples
+
+[33mcommit 0457201a52649e0123b1aea9d26e5427f56b3281[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sat Oct 21 17:53:05 2023 +0100
+
+    make user input in buy books function always lower case
+
+[33mcommit 71a9431c81f923b54b91cb715f403caa16b170fb[m
+Merge: 1067036 5f7bc41
+Author: Ros <123762126+RosalindHook@users.noreply.github.com>
+Date:   Sat Oct 21 17:46:17 2023 +0100
+
+    Merge pull request #24 from RosalindHook/Ros-API
+    
+    replace browse books function - accidentally deleted
+
+[33mcommit 5f7bc412bfed8b5910f203f23bd06f99ce4b5310[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sat Oct 21 17:45:18 2023 +0100
+
+    replace browse books function - accidentally deleted
+
+[33mcommit 106703645c089707c8d16ee30543fa295a47a3a8[m
+Author: Ros <123762126+RosalindHook@users.noreply.github.com>
+Date:   Sat Oct 21 17:39:03 2023 +0100
+
+    Update config.py
+    
+    remove personal details
+
+[33mcommit 410eb1ba1bf35a20fe6ab34b970192e7ba351483[m
+Merge: a2d6d27 86f9a2c
+Author: Ros <123762126+RosalindHook@users.noreply.github.com>
+Date:   Sat Oct 21 17:38:11 2023 +0100
+
+    Merge pull request #23 from RosalindHook/Ros-API
+    
+    update main.py and db_utils.py
+
+[33mcommit 86f9a2c8210fe8f3017b4d8e62bec63aaa9e3e95[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sat Oct 21 17:35:27 2023 +0100
+
+    remove duplicate code and debug buy_book() function
+
+[33mcommit 99752c5d1afa7b4fea89d58ec07e6be7dd9236fc[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sat Oct 21 17:22:30 2023 +0100
+
+    new config function - price of book and update main.py
+
+[33mcommit 97537753dda304552f650f93db231209feb826e1[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sat Oct 21 17:11:00 2023 +0100
+
+    add function to get book price by ID
+
+[33mcommit a2d6d2798e56432726a64dab2e107d4832df8296[m
+Merge: 76665c3 75ecce9
+Author: Sriya <144058982+sriyavemuru@users.noreply.github.com>
+Date:   Sat Oct 21 17:07:33 2023 +0100
+
+    Merge pull request #21 from RosalindHook/sriya-api-branch
+    
+    Sriya api branch
+
+[33mcommit 75ecce9a83cd7d1ab846ab3feeecb72c67c3c873[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sat Oct 21 16:51:19 2023 +0100
+
+    updated code for clarity
+
+[33mcommit 290e295524eb154d9a5dbf72ac7ac61a3071ad3a[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sat Oct 21 16:39:44 2023 +0100
+
+    updated code for clarity
+
+[33mcommit 76665c3694560dcc8b5432e483c28d6d5ab74625[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sat Oct 21 16:15:36 2023 +0100
+
+    README2.md update
+
+[33mcommit 7c51e34ddf3592c149c82349cd47f8448496d9cf[m
+Merge: 9f046fc 1ada863
+Author: rebjo16 <143842780+rebjo16@users.noreply.github.com>
+Date:   Sat Oct 21 16:06:03 2023 +0100
+
+    Merge pull request #20 from RosalindHook/sriya-api-branch
+    
+    Sriya api branch
+
+[33mcommit 1ada863031cc4a7c9ccfd8846cf2ad3c0203968d[m
+Merge: 66dfa3f 9f046fc
+Author: rebjo16 <143842780+rebjo16@users.noreply.github.com>
+Date:   Sat Oct 21 15:53:17 2023 +0100
+
+    Merge branch 'API-branch' into sriya-api-branch
+
+[33mcommit 9f046fc846dcad58f041ddeba7433bd0d4afa8f6[m
+Author: OlgaChumak13 <olgabuh10@ukr.net>
+Date:   Sat Oct 21 14:40:45 2023 +0100
+
+    add app.py file with one get query
+
+[33mcommit a5e65c27e006981839e2fca6ceed150c99f91e42[m
+Author: OlgaChumak13 <olgabuh10@ukr.net>
+Date:   Sat Oct 21 14:32:37 2023 +0100
+
+    Change query
+
+[33mcommit 66dfa3f5b012b298d887a2030a528aa7a58eee68[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sat Oct 21 13:18:40 2023 +0100
+
+    added stored procedure to retrieve books by author
+
+[33mcommit f4d9c1720b19dc067c5c3c574a06b3d8c5b3c7f2[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sat Oct 21 13:12:49 2023 +0100
+
+    added stored procedure to retrive books by genre
+
+[33mcommit 15388e2e80085512697e8c0fe924113a7407f66d[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sat Oct 21 13:09:53 2023 +0100
+
+    added stored procedure to retrieve books from branch
+
+[33mcommit d28b9d0da784a5d697821496717c370d53d8ddb0[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sat Oct 21 12:29:56 2023 +0100
+
+    Added option to purchase another book
+
+[33mcommit 23782c59021e90d05406d4f3d101977fdc653d4b[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sat Oct 21 12:13:36 2023 +0100
+
+    Added discount feature
+
+[33mcommit c95e573f530cb3427fe4457ddc4ca69ed497c324[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sat Oct 21 12:04:00 2023 +0100
+
+    Added while loop for multiple book purchases
+
+[33mcommit f0f89150f03054dcab6e44c369515f2a8d3a85e9[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sat Oct 21 11:16:36 2023 +0100
+
+    added search by author function
+
+[33mcommit 7316aafa685685ade88b9c9b93438b1db1047028[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sat Oct 21 10:53:33 2023 +0100
+
+    added explore genre function
+
+[33mcommit 3f58e26c9caca2e286fb15545a45adaacbd92865[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sat Oct 21 10:46:13 2023 +0100
+
+    added explore genre function
+
+[33mcommit 69b0f139aa134fa7346d10bc93fde684f6583795[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sat Oct 21 10:39:45 2023 +0100
+
+    added explore genre function
+
+[33mcommit 095d6061fcccbeecae45c6b890c8a88e0a2611ca[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sat Oct 21 09:44:51 2023 +0100
+
+    merged sriya-api-branch
+
+[33mcommit 5678a343dc2f404d35fdfe66be13e5c79d595d2c[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sat Oct 21 09:25:00 2023 +0100
+
+    updated tables
+
+[33mcommit a29a6b1618a019e18069accb5d24a436995314a7[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sat Oct 21 09:18:09 2023 +0100
+
+    updated tables
+
+[33mcommit 808bcd335f624bad0b6815bcabfb6b1546d202c0[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sat Oct 21 09:15:23 2023 +0100
+
+    Updated tables
+
+[33mcommit e41d5ca5892fc88256161b62d459411243ac28b9[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sat Oct 21 09:25:00 2023 +0100
+
+    updated tables
+
+[33mcommit 74dc8d4c42a4da78a2aaf15aa46281fb6303c4cb[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sat Oct 21 09:18:09 2023 +0100
+
+    updated tables
+
+[33mcommit 7562f853f97299a4b307cc8a50b7c610f01f27ff[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sat Oct 21 09:15:23 2023 +0100
+
+    Updated tables
+
+[33mcommit a4a703b0a05de999a4f6427364ad021a31a0dc1c[m
+Merge: cd88839 8fe1e25
+Author: Sriya <144058982+sriyavemuru@users.noreply.github.com>
+Date:   Sat Oct 21 09:04:28 2023 +0100
+
+    Merge pull request #19 from RosalindHook/sriya-api-branch
+    
+    Updated code for clarity
+
+[33mcommit 8fe1e25ed09b8432d85db41d423ca695ab67687f[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sat Oct 21 09:02:48 2023 +0100
+
+    updated code for clarity
+
+[33mcommit cd88839a18ca18cfb335c010e11f735894c9ee6a[m
+Merge: 6ae5244 3353570
+Author: Ros <123762126+RosalindHook@users.noreply.github.com>
+Date:   Fri Oct 20 23:32:45 2023 +0100
+
+    Merge pull request #18 from RosalindHook/Ros-API
+    
+    revert to Olga's function
+
+[33mcommit 3353570d5bfcfa7db51f5f1a8d88a749d92208e1[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Fri Oct 20 23:30:45 2023 +0100
+
+    revert to Olga's function
+
+[33mcommit 6ae524485eb27fceeafb07323f43500aa33add70[m
+Merge: 469307c de922c6
+Author: Ros <123762126+RosalindHook@users.noreply.github.com>
+Date:   Fri Oct 20 22:41:17 2023 +0100
+
+    Merge pull request #17 from RosalindHook/Ros-API
+    
+    initialise banner and main files, add new function to db_utils
+
+[33mcommit de922c639bcc1f1130f5ad08dfa3bb3a86457b22[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Fri Oct 20 22:39:48 2023 +0100
+
+    initialise banner and main files, add new function to db_utils
+
+[33mcommit 469307c598ee7eaa8565feae96b93c9334f2bfe5[m
+Merge: 4ab2097 050844b
+Author: Ros <123762126+RosalindHook@users.noreply.github.com>
+Date:   Fri Oct 20 21:39:09 2023 +0100
+
+    Merge pull request #16 from RosalindHook/Ros-API
+    
+    add genre function and error handling
+
+[33mcommit 050844bf05aca0272103c6f2121196df555a32e1[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Fri Oct 20 21:37:40 2023 +0100
+
+    add genre function and error handling
+
+[33mcommit 4ab2097daa515ce303c3d02906d9d67452d3b6c0[m
+Merge: 871bdef b8ba003
+Author: Ros <123762126+RosalindHook@users.noreply.github.com>
+Date:   Fri Oct 20 21:11:47 2023 +0100
+
+    Merge pull request #15 from RosalindHook/Ros-API
+    
+    add function to db_utils.py and add docstrings
+
+[33mcommit b8ba0035f77208a9852b3759862692ee8f924938[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Fri Oct 20 21:07:45 2023 +0100
+
+    add function to db_utils.py and add docstrings
+
+[33mcommit 871bdefd452da3e5fd39ff874ff8483860d46041[m
+Author: Ros <123762126+RosalindHook@users.noreply.github.com>
+Date:   Fri Oct 20 17:38:06 2023 +0100
+
+    Delete Name.txt
+    
+    tidy up main branch
+
+[33mcommit 5868376dba44483ce37f85fce1268dd152f288a1[m
+Author: OlgaChumak13 <olgabuh10@ukr.net>
+Date:   Fri Oct 20 17:11:17 2023 +0100
+
+    Dadelete personal data from config file
+
+[33mcommit 005bbe344d66a8f5ab4101062d4e116ab95f0b1d[m
+Author: OlgaChumak13 <olgabuh10@ukr.net>
+Date:   Fri Oct 20 17:03:48 2023 +0100
+
+    create store procedure Check if book available
+
+[33mcommit fcbd6f1db9686f579101211e5199588efe5d53db[m
+Author: OlgaChumak13 <olgabuh10@ukr.net>
+Date:   Fri Oct 20 16:55:21 2023 +0100
+
+    insert store procedure find_book_availability to SQL
+
+[33mcommit 77ddf76aaa6776638f0741a2d6bde57cdee216d9[m
+Author: OlgaChumak13 <olgabuh10@ukr.net>
+Date:   Fri Oct 20 11:23:19 2023 +0100
+
+    insert into storebranch branch Edinburgh
+
+[33mcommit 103fc56957f830a94db1f66f726c01f0caceab5e[m
+Author: OlgaChumak13 <olgabuh10@ukr.net>
+Date:   Fri Oct 20 11:07:40 2023 +0100
+
+    insert into storeBranch Edinburgh branch
+
+[33mcommit ec6b8383ded089b6f3efaa6ca94de499ec025b06[m
+Merge: 8a61c21 89201ea
+Author: Ros <123762126+RosalindHook@users.noreply.github.com>
+Date:   Thu Oct 19 14:57:09 2023 +0100
+
+    Merge pull request #12 from RosalindHook/ros-branch
+    
+    update bookshop database
+
+[33mcommit 89201ea99a7de2147271d604539ef3ac28460080[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Thu Oct 19 14:55:59 2023 +0100
+
+    updated bookshop database
+
+[33mcommit 8a61c21ad398d62ba6f67d714aa1c1b5326ff526[m
+Merge: 57969c5 60a7a44
+Author: Ros <123762126+RosalindHook@users.noreply.github.com>
+Date:   Thu Oct 19 14:41:58 2023 +0100
+
+    Merge pull request #11 from RosalindHook/ros-branch
+    
+    Initial commit - create config, README and SQL database
+
+[33mcommit 60a7a441d1f3c6dd9bd091e84a683d751457f389[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Thu Oct 19 14:40:45 2023 +0100
+
+    Initial commit
+
+[33mcommit 57969c5f8058dd88704882e9422017c51a96dd45[m
+Author: Ros <123762126+RosalindHook@users.noreply.github.com>
+Date:   Thu Oct 19 12:47:03 2023 +0100
+
+    Delete Screenshot 2023-10-16 at 20.57.01.png
+    
+    delete duplicate file
+
+[33mcommit cbeafd54c4f1424ded71e04bedc700653cbcd8db[m
+Author: Ros <123762126+RosalindHook@users.noreply.github.com>
+Date:   Thu Oct 19 12:46:32 2023 +0100
+
+    Delete team-7-workflow.drawio.png
+    
+    delete duplicate image
+
+[33mcommit 4d952d3b67d920a84d8db36273c004d78fd6177c[m
+Merge: 911cac6 b937c5c
+Author: Ros <123762126+RosalindHook@users.noreply.github.com>
+Date:   Thu Oct 19 12:41:57 2023 +0100
+
+    Merge pull request #10 from RosalindHook/ros-branch
+    
+    remove not working emojis and tidy up formatting in README
+
+[33mcommit b937c5c820593fe07e411751b9a6844f01103b5a[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Thu Oct 19 12:41:03 2023 +0100
+
+    remove not working emojis and tidy up formatting in README
+
+[33mcommit 911cac639dd4f23e959e707134c7a6ae2f585998[m
+Merge: ff50caa 838414b
+Author: Ros <123762126+RosalindHook@users.noreply.github.com>
+Date:   Thu Oct 19 12:31:15 2023 +0100
+
+    Merge pull request #9 from RosalindHook/ros-branch
+    
+    Ros branch
+
+[33mcommit 838414b6c9dcec1994997b211b25dd1fa734d003[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Thu Oct 19 12:29:33 2023 +0100
+
+    Merge main into your-personal-branch
+
+[33mcommit 0eb74fc51949c3a502df83ffa33cddbd211a5350[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Thu Oct 19 12:19:32 2023 +0100
+
+    Update readme on main and add image files
+
+[33mcommit ff50caabc888025a44762459fee4d541e7960b94[m
+Merge: 18bada6 9daa0ad
+Author: Ros <123762126+RosalindHook@users.noreply.github.com>
+Date:   Thu Oct 19 10:47:13 2023 +0100
+
+    Merge pull request #8 from RosalindHook/ros-branch
+    
+    Add work flow plan and Trello screenshot
+
+[33mcommit 18bada63539506e303387df1af89bf2dbccf458d[m
+Merge: 858b823 9c5e6bf
+Author: Ros <123762126+RosalindHook@users.noreply.github.com>
+Date:   Thu Oct 19 10:45:19 2023 +0100
+
+    Merge pull request #7 from RosalindHook/olga_brunch
+    
+    Slogan file
+
+[33mcommit 858b823e50cc6566edab6080c8cdcba4a297281d[m
+Merge: 5f53aae 438ca96
+Author: Ros <123762126+RosalindHook@users.noreply.github.com>
+Date:   Tue Oct 17 16:35:45 2023 +0100
+
+    Merge pull request #6 from RosalindHook/rebecca-branch
+    
+    Rebecca branch
+
+[33mcommit 9daa0ad90047811c3147c2436dcb003d6f79379c[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Mon Oct 16 21:02:34 2023 +0100
+
+    Add work flow plan and Trello screenshot
+
+[33mcommit 9c5e6bfffff2030c5f7bb303e433ae77a108d6c4[m[33m ([m[1;31mgroup-7-cfg/olga_brunch[m[33m)[m
+Author: OlgaChumak13 <olgabuh10@ukr.net>
+Date:   Mon Oct 16 14:38:33 2023 +0300
+
+    Slogan file
+
+[33mcommit 5f53aaeace9fe5506d970f8574bfcfe4ebcac1e3[m
+Author: RebJo16 <rebeccatognini@gmail.com>
+Date:   Sun Oct 15 21:29:08 2023 +0100
+
+    Rebecca added a requirements text file containing info about requirements
+
+[33mcommit 438ca9636c16d522b1f0d789727971870f667876[m[33m ([m[1;31mgroup-7-cfg/rebecca-branch[m[33m)[m
+Author: RebJo16 <rebeccatognini@gmail.com>
+Date:   Sun Oct 15 21:01:50 2023 +0100
+
+    Second update of Rebecca info to correct mistakes
+
+[33mcommit e718d28dde3cb063bc0b7460529b7d74f600373c[m
+Author: RebJo16 <rebeccatognini@gmail.com>
+Date:   Sun Oct 15 20:45:48 2023 +0100
+
+    Updated README with Rebecca info with markdown langauge included
+
+[33mcommit 41c577337d0570a2265ca31cb7d3793c1e1bd7b5[m
+Author: RebJo16 <rebeccatognini@gmail.com>
+Date:   Sun Oct 15 20:37:41 2023 +0100
+
+    Updated README with Rebecca info with markdown language included
+
+[33mcommit 2e4d3fe994b5e51aaa86132d17a85d93f0608608[m
+Author: RebJo16 <rebeccatognini@gmail.com>
+Date:   Sun Oct 15 16:06:21 2023 +0100
+
+    Updated README with Rebecca info with markdown language
+
+[33mcommit d89af128d133e4a1b750cfbb9648ca44e5340ec3[m
+Author: RebJo16 <rebeccatognini@gmail.com>
+Date:   Sun Oct 15 15:50:57 2023 +0100
+
+    Updated README with Rebecca info including markdown language
+
+[33mcommit 0aafdaaffb8f2f6914fdca8697971907f30da537[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sun Oct 15 16:11:24 2023 +0100
+
+    add footnote for London coffee recommendation
+
+[33mcommit 77884d97a61cbf0d5a43f85e4a218745c39e807c[m
+Merge: 272f7f3 a4fb06d
+Author: Ros <123762126+RosalindHook@users.noreply.github.com>
+Date:   Sun Oct 15 15:19:44 2023 +0100
+
+    Merge pull request #4 from RosalindHook/rebecca-branch
+    
+    Updated README with Rebecca info - merge conflict resolved
+
+[33mcommit a4fb06dcaa61ca8c67d1958c47c95d5c6278b6af[m
+Merge: bc03ab2 272f7f3
+Author: Ros <123762126+RosalindHook@users.noreply.github.com>
+Date:   Sun Oct 15 15:19:03 2023 +0100
+
+    Merge branch 'main' into rebecca-branch
+
+[33mcommit 272f7f3ba376897326a9f1b6094a022d7a5f9bbc[m
+Merge: 4832f3d 7fc0417
+Author: Sriya <144058982+sriyavemuru@users.noreply.github.com>
+Date:   Sun Oct 15 15:07:30 2023 +0100
+
+    Merge pull request #5 from RosalindHook/ros-branch
+    
+    create .gitignore file including info about what it is
+
+[33mcommit 7fc04179cdb3afcb2b672ee35b6b0226cc63cf1a[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Sun Oct 15 14:55:54 2023 +0100
+
+    create .gitignore file including info about what it is
+
+[33mcommit 4832f3d8122c1c44eb2f0ddb2b4d07562577287d[m
+Merge: a3afa3d 7ba0951
+Author: rebjo16 <143842780+rebjo16@users.noreply.github.com>
+Date:   Sun Oct 15 13:18:16 2023 +0100
+
+    Merge pull request #3 from RosalindHook/sriya-branch
+    
+    Updated README with Sriya info
+
+[33mcommit bc03ab23256cd7371ee7ccb078946c85ceb95f26[m
+Author: RebJo16 <rebeccatognini@gmail.com>
+Date:   Sun Oct 15 12:56:41 2023 +0100
+
+    Updated README with Rebecca info
+
+[33mcommit 7ba0951c4fe8bf52bb67b256136ad45f577d031f[m[33m ([m[1;31mgroup-7-cfg/sriya-branch[m[33m)[m
+Author: Sriya Vemuru <sriyavemuru@gmail.com>
+Date:   Sun Oct 15 11:38:28 2023 +0100
+
+    Updated README with Sriya info
+
+[33mcommit a3afa3dddca344797342aa5392fe789236f438bb[m
+Merge: 55bbc53 1b012b1
+Author: Ros <123762126+RosalindHook@users.noreply.github.com>
+Date:   Fri Oct 13 20:23:18 2023 +0100
+
+    Merge pull request #2 from RosalindHook/ros-branch
+    
+    Added hyperlinks and set up team name poll
+
+[33mcommit 1b012b1d4f43f902dbb2aa8846fcecf9eb87d98b[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Fri Oct 13 20:22:07 2023 +0100
+
+    Added hyperlinks and set up team name poll
+
+[33mcommit 55bbc53d76d699b08aded823107e3f49ec3db5ad[m
+Author: Rosalind <rosalind.hook@gmail.com>
+Date:   Fri Oct 13 19:57:40 2023 +0100
+
+    Updated README with info about Ros
+
+[33mcommit a5aaad2767ca2b020f1f9707fae4ae7ac28ea541[m
+Merge: 10f4b2d f135d46
+Author: Ros <123762126+RosalindHook@users.noreply.github.com>
+Date:   Fri Oct 13 19:22:20 2023 +0100
+
+    Merge pull request #1 from RosalindHook/olga_brunch
+    
+    Olga greeting
+
+[33mcommit f135d465eec354e323537b81821753cff969a5aa[m
+Author: OlgaChumak13 <olgabuh10@ukr.net>
+Date:   Fri Oct 13 19:05:15 2023 +0100
+
+    Olga greeting
+
+[33mcommit 10f4b2d828ea05a281f94fb5b4a3eb79b0353dde[m
+Author: Ros <123762126+RosalindHook@users.noreply.github.com>
+Date:   Fri Oct 13 18:25:44 2023 +0100
+
+    Initial commit
