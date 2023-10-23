@@ -1,5 +1,6 @@
 import mysql.connector
 from config import HOST, USER, PASSWORD
+import random
 
 def _connect_to_db(db_name):
     try:
