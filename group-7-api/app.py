@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request
-from db_utils import get_authors_records, get_all_books, get_random_books, check_book_availability, get_book_stock_info, update_book_stock
+from db_utils import get_authors_records, get_all_books, get_random_books, check_book_availability, get_book_stock_info, update_book_stock, insert_donated_book
 
 app = Flask(__name__)
 @app.route('/authors')
@@ -89,6 +89,21 @@ def get_bonus():
     else:
         return jsonify([])  # if no books found, return empty list
 
+@app.route('/donate', methods=['POST'])
+def donate_book():
+    data = request.get_json()
+
+    # Extract book details from the JSON data
+    title = data.get('title')
+    author = data.get('author')
+    genre = data.get('genre')
+    condition = data.get('condition')
+    description = data.get('description')
+
+    # Insert the donated book into the database using the new function
+    insert_donated_book(title, author, genre, condition, description)
+
+    return jsonify({"message": "Book donation successful"})
 
 if __name__ == '__main__':
     app.run(debug=True, port=5003)
