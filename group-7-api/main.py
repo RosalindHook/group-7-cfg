@@ -168,7 +168,19 @@ def random_bonus():
             if not found:
                 print("Invalid book ID. Please type the correct ID.")
 
+def donate_book():
+    print("Donating a Book")
+    title = input("Enter the title of the book: ")
+    author = input("Enter the author's name: ")
+    genre = input("Enter the genre of the book: ")
+    condition = input("Enter the condition of the book: ")
+    description = input("Enter a description of the book: ")
 
+    # Insert the donated book into the database
+    db_utils.insert_donated_book(title, author, genre, condition, description)
+    print("Book donation successful!")
+
+    
 # function to run menu with options
 def run():
     print(banner)
