@@ -145,7 +145,7 @@ def random_bonus():
     if result.status_code == 200:
         books = result.json()
         if books:
-            print("\n Congratulations:")
+            print("\n Congratulations. You have the chance to buy one of these books at a discounted price:")
             print(f"{'Book ID':<10}{'Title':<40}{'Author':<30}{'Price':<10}")
             print("-" * 90)
             for book in books:
