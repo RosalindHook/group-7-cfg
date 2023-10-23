@@ -194,7 +194,8 @@ Once the application is up and running, simply execute main.py, and you'll be gr
    - Customers can then search for specific genres or authors and discover the matching books in the bookshop’s catalogues.
 4. **Random bonus:** The random_bonus() function treats customers by fetching a random selection of books from the database (GET endpoint). 
    - Customers have the option to purchase these bonus books at a discounted price.
-5. **Donate books:** The donate_book() function allows users to add data about books they would like to donate to the secondhand section of the bookshop. Users can add a title, author, genre, condition and description of the book.
+5. **Donate books:** The donate_book() function allows users to add data about books they would like to donate to the secondhand section of the bookshop. 
+   - Customers can add a title, author, genre, condition and description of the book.
 
 ---
 ### MySQL Database :file_cabinet: <a name="database"></a>
