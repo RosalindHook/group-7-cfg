@@ -16,7 +16,7 @@ The API allows users to browse books, explore various genres and authors, get bo
    3. [buy_book()](#buy-book)
    4. [get_stock_info()](#stock)
    5. [get_bonus()](#bonus)
-   6. [POST DONATION (TBC)](#donation)
+   6. [donate_book()](#donation)
 7. [Database Utilities File](#util)
 8. [Main Application](#main)
 9. [MySQL Database](#database)
