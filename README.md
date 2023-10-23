@@ -1,7 +1,7 @@
 # Code Queens - Putting the 7 in Heaven
 
-## **Hello !. My name is Olga.** :smile:
-### _I am very glad to be a member of such a wonderful team. 
+## **Hello ! My name is Olga.** :smile:
+### I am very glad to be a member of such a wonderful team. 
 * I love playing the piano and watching TV series. 
 * I also love playing chess with my son._
 
@@ -33,6 +33,7 @@ My favourite quote is:
 >"Women belong in all places where decisions are being made. It shouldn't be that women are the exception." 
  -Ruth Bader Ginsburg
 
+---
 
 ## **Collaborative approach and ways of working** :handshake:
 
